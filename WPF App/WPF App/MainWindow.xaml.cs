@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WPF_App
@@ -23,6 +22,11 @@ namespace WPF_App
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ClickButton_Click(object sender, RoutedEventArgs e)
+        {
+            ScoreLabel.Content = "CO ZA BRAMKAAAAAAAAAAAAAAAAAA";
         }
     }
 }
