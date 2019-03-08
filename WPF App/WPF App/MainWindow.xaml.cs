@@ -19,14 +19,16 @@ namespace WPF_App
     /// </summary>
     public partial class MainWindow : Window
     {
+        User testuser = new User();
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void ClickButton_Click(object sender, RoutedEventArgs e)
         {
-            ScoreLabel.Content = "CO ZA BRAMKAAAAAAAAAAAAAAAAAA";
+            ScoreLabel.Content =++testuser.Points;
         }
     }
 }
