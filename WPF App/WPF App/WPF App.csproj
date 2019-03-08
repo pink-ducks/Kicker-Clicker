@@ -101,5 +101,8 @@
     <Folder Include="DataBase [Model]\" />
     <Folder Include="View\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sources\ball.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
