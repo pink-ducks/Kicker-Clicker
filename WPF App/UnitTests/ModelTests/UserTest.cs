@@ -13,7 +13,7 @@ namespace UnitTests
             User TestUser = new User();
 
             int expectedPoints = 0;
-            int expectedAddingSpeed = 1;
+            int expectedAddingSpeed = 0;
 
             int currentPoints = TestUser.Points;
             int currentAddingSpeed = TestUser.SpeedOfAddingPoints;

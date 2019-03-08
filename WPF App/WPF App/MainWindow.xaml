@@ -5,17 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_App"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="ClickButton" Click="ClickButton_Click" Margin="161,91,168.6,107" >
-            <Button.Template>
-                <ControlTemplate>
-                    <Image Source="Sources/ball.png" />
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
-
-
-        <Label x:Name="ScoreLabel" Content="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="56" Width="792" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei UI Light" FontSize="36" RenderTransformOrigin="0.504,0"/>
-    </Grid>
+        Title="MainWindow" Height="450" Width="800"
+        WindowState="Maximized">
+    <Viewbox StretchDirection="Both" Stretch="Uniform">
+        <Grid>
+            <Button x:Name="BallButton" Click="ClickButton_Click" SnapsToDevicePixels="True" VerticalAlignment="Bottom" Height="240" Width="120" >
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="Sources/ball.png" />
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Label x:Name="ScoreLabel" Content="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="100" Width="792" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei" FontSize="36" RenderTransformOrigin="0.504,0" Margin="0,0,0,-49"/>
+        </Grid>
+    </Viewbox>
 </Window>
