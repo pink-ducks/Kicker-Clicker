@@ -7,7 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="ClickButton" Content="CYK BRAMECZKA" Margin="0,0,0,-2" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="ClickButton_Click"/>
-        <Label x:Name="ScoreLabel" Content="Score" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="56" Width="792" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei UI Light" FontSize="36" RenderTransformOrigin="0.504,0"/>
+        <Button x:Name="ClickButton" Click="ClickButton_Click" Margin="161,91,168.6,107" >
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="Sources/ball.png" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Label x:Name="ScoreLabel" Content="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="56" Width="792" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei UI Light" FontSize="36" RenderTransformOrigin="0.504,0"/>
     </Grid>
 </Window>
