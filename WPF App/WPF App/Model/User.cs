@@ -8,9 +8,9 @@ namespace WPF_App
 {
     public class User
     {
-        private int _points = 0;
+        private static int _points = 0;
         public int Points { get => _points; set => _points = value; }
-        private int _speedOfAddingPoints = 1;
+        private static int _speedOfAddingPoints = 0;
         public int SpeedOfAddingPoints { get => _speedOfAddingPoints; set => _speedOfAddingPoints = value; }
 
         // constructor
