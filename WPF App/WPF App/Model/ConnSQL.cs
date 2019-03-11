@@ -11,13 +11,16 @@ namespace WPF_App.Model
     {
         //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-PEJHOGB;Initial Catalog=NowaBaza;Integrated Security=True");
         public void Connection()
+        //public void Connection(string connectionID, string sqlquarty)
         {
             try
             {
+                // using (SqlConnection connection = new SqlConnection(connectionID))
                 using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-PEJHOGB;Initial Catalog=NowaBaza;Integrated Security=True"))
                 {
                     connection.Open();
                     using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.Table", connection))
+                    //using (SqlCommand command = new SqlCommand(sqlquarty, connection))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
