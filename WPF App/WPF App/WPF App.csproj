@@ -60,6 +60,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controller\Controller.cs" />
+    <Compile Include="Model\ConnSQL.cs" />
     <Compile Include="Model\User.cs" />
   </ItemGroup>
   <ItemGroup>
