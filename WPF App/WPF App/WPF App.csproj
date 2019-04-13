@@ -60,7 +60,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controller\Controller.cs" />
+    <Compile Include="View\ImprovementUpdater.cs" />
     <Compile Include="Model\ConnSQL.cs" />
+    <Compile Include="Model\Improvement.cs" />
     <Compile Include="Model\User.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -98,10 +100,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataBase [Model]\" />
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Sources\ball.png" />
   </ItemGroup>

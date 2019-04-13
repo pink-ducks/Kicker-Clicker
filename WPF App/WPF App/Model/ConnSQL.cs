@@ -9,6 +9,9 @@ namespace WPF_App.Model
 {
     class ConnSQL
     {
+        private static bool isConnected;
+        public static bool IsConnected { get => isConnected; set => isConnected = value; }
+
         //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-PEJHOGB;Initial Catalog=NowaBaza;Integrated Security=True");
         public void Connection()
         //public void Connection(string connectionID, string sqlquarty)
@@ -39,6 +42,7 @@ namespace WPF_App.Model
             catch (Exception ex)
             {
                 Console.WriteLine("can not open connection ! ");
+                IsConnected = false;
             }
         }
     }
