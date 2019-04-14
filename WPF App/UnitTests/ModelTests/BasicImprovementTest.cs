@@ -15,8 +15,7 @@ namespace UnitTests
             Assert.AreEqual(0, I.NumberOfUpgrades);
             Assert.AreEqual(10000, I.StartingPrice);
             Assert.AreEqual(10000, I.CurrentPrice);
-            Assert.AreEqual(0.1 , I.StartingSpeed);
-            Assert.AreEqual(0.1, I.CurrentSpeed);
+            Assert.AreEqual(0.1 , I.SpeedOfAddingPoints);
             Assert.AreEqual(4, I.LevelRequired);
         }
         [TestMethod]
@@ -30,8 +29,7 @@ namespace UnitTests
             Assert.AreEqual(2, I.NumberOfUpgrades);
             Assert.AreEqual(10000, I.StartingPrice);
             Assert.AreEqual(13225, I.CurrentPrice);
-            Assert.AreEqual(0.1, I.StartingSpeed);
-            Assert.AreEqual(0.3, I.CurrentSpeed, 0.00000001);
+            Assert.AreEqual(0.1, I.SpeedOfAddingPoints);
             Assert.AreEqual(4, I.LevelRequired);
         }
     }

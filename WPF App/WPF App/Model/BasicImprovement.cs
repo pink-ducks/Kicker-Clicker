@@ -9,10 +9,8 @@ namespace WPF_App.Model
     public class BasicImprovement: Improvement
     {
         private double _startingSpeed;
-        private double _currentSpeed;
 
-        public double StartingSpeed { get => _startingSpeed; set => _startingSpeed = value; }
-        public double CurrentSpeed { get => _currentSpeed; set => _currentSpeed = value; }
+        public double SpeedOfAddingPoints { get => _startingSpeed; set => _startingSpeed = value; }
 
         // CONSTRUCTORS
         public BasicImprovement()
@@ -24,16 +22,14 @@ namespace WPF_App.Model
             NumberOfUpgrades = 0;
             StartingPrice = startingPrice;
             CurrentPrice = startingPrice;
-            StartingSpeed = startingSpeed;
-            CurrentSpeed = startingSpeed;
+            SpeedOfAddingPoints = startingSpeed;
             LevelRequired = levelRequired;
         }
         // METHODS 
         public override void Upgrade()
         {
             NumberOfUpgrades++;
-            CurrentPrice = Convert.ToInt32(StartingPrice * Math.Pow(1.15, NumberOfUpgrades));
-            CurrentSpeed = CurrentSpeed + StartingSpeed;   
+            CurrentPrice = Convert.ToInt32(StartingPrice * Math.Pow(1.15, NumberOfUpgrades)); 
         }
     }
 }

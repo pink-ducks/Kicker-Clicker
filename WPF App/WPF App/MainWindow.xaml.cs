@@ -19,27 +19,41 @@ namespace WPF_App
 {
     public partial class MainWindow : Window
     {
-        User user = new User();
+        User user = new User(); // MODEL
+        BasicImprovement BI1 = new BasicImprovement(15, 0.1, 0); // MODEL
+        MyView view = new MyView(); // VIEW
+        MyController controller = new MyController(); // CONTROLLER
+
         public MainWindow()
         {
             InitializeComponent();
-            MyView view = new MyView(Improvement1Button); // VIEW
-            view.SetStartingPrice(15);
-
-            BasicImprovement BI1 = new BasicImprovement(15, 0.1, 0); // MODEL
-            MyController controller = new MyController(BI1); // CONTROLLER
-
+            view.AddLabel(ScoreLabel);
+            view.AddButton(Improvement1Button);
+            view.SetButtonText(15);
+            controller.AddBasicImprovement(BI1);
+            controller.AddUser(user);
             //ConnSQL database = new ConnSQL();
             //database.Connection();
         }
 
         private void ClickButton_Click(object sender, RoutedEventArgs e)
         {
-            ScoreLabel.Content =++user.Points;
+            controller.AddPointsToUser(1);
+            view.SetLabelText(Convert.ToInt32(user.Points));
         }
         private void Improvement1Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            if(user.Points >= BI1.CurrentPrice && user.Level >= BI1.LevelRequired)
+            {
+                controller.ChargeUser(BI1.CurrentPrice);
+                view.SetLabelText(Convert.ToInt32(user.Points));
+
+                //ScoreLabel.Content = user.Points;
+                controller.IncreaseUserAdditionSpeed(BI1.SpeedOfAddingPoints);
+                controller.UpgradeBasicImprovement();
+                view.SetButtonText(BI1.CurrentPrice);
+                
+            }
         }
     }
 }

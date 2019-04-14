@@ -20,6 +20,15 @@ namespace WPF_App.Controller
         {
 
         }
-        public MyController(BasicImprovement basicImprovement) => BasicImprovement = basicImprovement;
+        // METHODS
+        public void AddBasicImprovement(BasicImprovement basicImprovement) => BasicImprovement = basicImprovement;
+        public void AddUser(User user) => User = user;
+        public void ChargeUser(double points) => User.Points -= points;
+        public void AddPointsToUser(double points) => User.Points += points;
+        public void IncreaseUserAdditionSpeed(double speed) => User.SpeedOfAddingPoints += speed;
+        public void UpgradeBasicImprovement()
+        {
+            BasicImprovement.Upgrade();
+        }
     }
 }
