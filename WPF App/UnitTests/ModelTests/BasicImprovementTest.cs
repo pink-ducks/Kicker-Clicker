@@ -10,18 +10,17 @@ namespace UnitTests
         [TestMethod]
         public void BIInitializationTest()
         {
-            BasicImprovement I = new BasicImprovement(10000, 0.1, 4);
+            BasicImprovement I = new BasicImprovement(10000, 0.1);
 
             Assert.AreEqual(0, I.NumberOfUpgrades);
             Assert.AreEqual(10000, I.StartingPrice);
             Assert.AreEqual(10000, I.CurrentPrice);
             Assert.AreEqual(0.1 , I.SpeedOfAddingPoints);
-            Assert.AreEqual(4, I.LevelRequired);
         }
         [TestMethod]
         public void BIUpgradeTest()
         {
-            BasicImprovement I = new BasicImprovement(10000, 0.1, 4);
+            BasicImprovement I = new BasicImprovement(10000, 0.1);
             // user level > improvement level
             I.Upgrade();
             I.Upgrade();    
@@ -30,7 +29,6 @@ namespace UnitTests
             Assert.AreEqual(10000, I.StartingPrice);
             Assert.AreEqual(13225, I.CurrentPrice);
             Assert.AreEqual(0.1, I.SpeedOfAddingPoints);
-            Assert.AreEqual(4, I.LevelRequired);
         }
     }
 }

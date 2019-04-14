@@ -20,7 +20,12 @@ namespace WPF_App
     public partial class MainWindow : Window
     {
         User user = new User(); // MODEL
-        BasicImprovement BI1 = new BasicImprovement(15, 0.1, 0); // MODEL
+        BasicImprovement BI1 = new BasicImprovement(15, 0.1); // MODEL
+        BasicImprovement BI2 = new BasicImprovement(100, 1); // MODEL
+        BasicImprovement BI3 = new BasicImprovement(1100, 8); // MODEL
+        BasicImprovement BI4 = new BasicImprovement(12000, 47); // MODEL
+        BasicImprovement BI5 = new BasicImprovement(130000, 260); // MODEL
+        BasicImprovement BI6 = new BasicImprovement(1400000, 1400); // MODEL
         MyView view = new MyView(); // VIEW
         MyController controller = new MyController(); // CONTROLLER
 
@@ -45,7 +50,7 @@ namespace WPF_App
         }
         private void Improvement1Button_Click(object sender, RoutedEventArgs e)
         {
-            if(user.Points >= BI1.CurrentPrice && user.Level >= BI1.LevelRequired)
+            if(user.Points >= BI1.CurrentPrice)
             {
                 controller.ChargeUser(BI1.CurrentPrice);
                 view.SetLabelText(user.Points);

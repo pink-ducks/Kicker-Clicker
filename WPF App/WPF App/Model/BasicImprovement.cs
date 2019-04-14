@@ -17,13 +17,12 @@ namespace WPF_App.Model
         {
 
         }
-        public BasicImprovement(int startingPrice, double startingSpeed, int levelRequired)
+        public BasicImprovement(int startingPrice, double startingSpeed)
         {
             NumberOfUpgrades = 0;
             StartingPrice = startingPrice;
             CurrentPrice = startingPrice;
             SpeedOfAddingPoints = startingSpeed;
-            LevelRequired = levelRequired;
         }
         // METHODS 
         public override void Upgrade()

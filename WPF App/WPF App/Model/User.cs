@@ -10,18 +10,15 @@ namespace WPF_App.Model
     {
         private static double _points;
         private static double _speedOfAddingPoints;
-        private static int _level;
 
         public double Points { get => _points; set => _points = value; }
         public double SpeedOfAddingPoints { get => _speedOfAddingPoints; set => _speedOfAddingPoints = value; }
-        public int Level { get => _level; set => _level = value; }
 
         // CONSTRUCTORS 
         public User()
         {
 
         }
-        public User(int lvl) => Level = lvl;
         // METHODS
 
     }

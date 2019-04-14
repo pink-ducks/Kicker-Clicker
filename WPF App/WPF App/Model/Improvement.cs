@@ -11,12 +11,10 @@ namespace WPF_App.Model
         private int _numberOfUpgrades;
         private int _startingPrice;
         private int _currentPrice;
-        private int _levelRequired;
 
         public int NumberOfUpgrades { get => _numberOfUpgrades; set => _numberOfUpgrades = value; }
         public int StartingPrice { get => _startingPrice; set => _startingPrice = value; }
         public int CurrentPrice { get => _currentPrice; set => _currentPrice = value; }
-        public int LevelRequired { get => _levelRequired; set => _levelRequired = value; }
 
         // METHODS
         public abstract void Upgrade();
