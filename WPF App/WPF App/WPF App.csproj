@@ -60,6 +60,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controller\Controller.cs" />
+    <Compile Include="Model\BasicImprovement.cs" />
+    <Compile Include="Model\BonusImprovement.cs" />
     <Compile Include="View\ImprovementUpdater.cs" />
     <Compile Include="Model\ConnSQL.cs" />
     <Compile Include="Model\Improvement.cs" />
