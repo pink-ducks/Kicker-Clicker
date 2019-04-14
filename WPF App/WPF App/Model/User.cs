@@ -8,13 +8,13 @@ namespace WPF_App.Model
 {
     public class User
     {
-        private static int points;
-        private static int speedOfAddingPoints;
-        private static int level;
+        private static int _points;
+        private static int _speedOfAddingPoints;
+        private static int _level;
 
-        public int Points { get => points; set => points = value; }
-        public int SpeedOfAddingPoints { get => speedOfAddingPoints; set => speedOfAddingPoints = value; }
-        public int Level { get => level; set => level = value; }
+        public int Points { get => _points; set => _points = value; }
+        public int SpeedOfAddingPoints { get => _speedOfAddingPoints; set => _speedOfAddingPoints = value; }
+        public int Level { get => _level; set => _level = value; }
 
         // CONSTRUCTORS 
         public User()
