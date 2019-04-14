@@ -27,6 +27,7 @@ namespace WPF_App
         public MainWindow()
         {
             InitializeComponent();
+            controller.LinkView(view);
             view.AddLabel(ScoreLabel);
             view.AddButton(Improvement1Button);
             view.SetButtonText(15);
@@ -34,25 +35,25 @@ namespace WPF_App
             controller.AddUser(user);
             //ConnSQL database = new ConnSQL();
             //database.Connection();
+
         }
 
         private void ClickButton_Click(object sender, RoutedEventArgs e)
         {
             controller.AddPointsToUser(1);
-            view.SetLabelText(Convert.ToInt32(user.Points));
+            view.SetLabelText(user.Points);
         }
         private void Improvement1Button_Click(object sender, RoutedEventArgs e)
         {
             if(user.Points >= BI1.CurrentPrice && user.Level >= BI1.LevelRequired)
             {
                 controller.ChargeUser(BI1.CurrentPrice);
-                view.SetLabelText(Convert.ToInt32(user.Points));
+                view.SetLabelText(user.Points);
 
                 //ScoreLabel.Content = user.Points;
                 controller.IncreaseUserAdditionSpeed(BI1.SpeedOfAddingPoints);
                 controller.UpgradeBasicImprovement();
-                view.SetButtonText(BI1.CurrentPrice);
-                
+                view.SetButtonText(BI1.CurrentPrice);             
             }
         }
     }
