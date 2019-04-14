@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace WPF_App.Model
 {
-    class BonusImprovement
+    public abstract class BonusImprovement: Improvement
     {
+        // METHODS 
+        public override void Upgrade()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
