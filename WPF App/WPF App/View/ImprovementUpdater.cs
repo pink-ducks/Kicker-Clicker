@@ -7,10 +7,12 @@ using WPF_App.Model;
 
 namespace WPF_App.Controller
 {
-    class Controller
+    class ImprovementUpdater
     {
-        private User _user = new User();
 
-        public User User { get => _user; set => _user = value; }
+        void isAvailable(Improvement i)
+        {
+
+        }
     }
 }

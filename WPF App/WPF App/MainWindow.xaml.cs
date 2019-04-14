@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPF_App.Model;
 
 namespace WPF_App
 {
@@ -23,7 +24,8 @@ namespace WPF_App
         public MainWindow()
         {
             InitializeComponent();
-            
+            //ConnSQL database = new ConnSQL();
+            //database.Connection();
         }
 
         private void ClickButton_Click(object sender, RoutedEventArgs e)
