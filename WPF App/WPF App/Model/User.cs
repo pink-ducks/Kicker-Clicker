@@ -4,20 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPF_App
+namespace WPF_App.Model
 {
     public class User
     {
-        private static int _points = 0;
-        public int Points { get => _points; set => _points = value; }
-        private static int _speedOfAddingPoints = 0;
-        public int SpeedOfAddingPoints { get => _speedOfAddingPoints; set => _speedOfAddingPoints = value; }
+        private static double _points;
+        private static double _speedOfAddingPoints;
 
-        // constructor
+        public double Points { get => _points; set => _points = value; }
+        public double SpeedOfAddingPoints { get => _speedOfAddingPoints; set => _speedOfAddingPoints = value; }
+
+        // CONSTRUCTORS 
         public User()
         {
+
         }
-        // methods
+        // METHODS
 
     }
 }

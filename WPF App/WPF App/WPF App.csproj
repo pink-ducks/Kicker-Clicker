@@ -59,8 +59,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controller\Controller.cs" />
+    <Compile Include="Controller\MyController.cs" />
+    <Compile Include="Model\BasicImprovement.cs" />
+    <Compile Include="Model\BonusImprovement.cs" />
+    <Compile Include="View\View.cs" />
     <Compile Include="Model\ConnSQL.cs" />
+    <Compile Include="Model\Improvement.cs" />
     <Compile Include="Model\User.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -98,12 +102,12 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataBase [Model]\" />
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Sources\ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sources\test.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

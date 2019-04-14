@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WPF_App;
+using WPF_App.Model;
 
 namespace UnitTests
 {
@@ -12,11 +12,11 @@ namespace UnitTests
         {
             User TestUser = new User();
 
-            int expectedPoints = 0;
-            int expectedAddingSpeed = 0;
+            double expectedPoints = 0;
+            double expectedAddingSpeed = 0;
 
-            int currentPoints = TestUser.Points;
-            int currentAddingSpeed = TestUser.SpeedOfAddingPoints;
+            double currentPoints = TestUser.Points;
+            double currentAddingSpeed = TestUser.SpeedOfAddingPoints;
 
             Assert.AreEqual(expectedPoints, currentPoints);
             Assert.AreEqual(expectedAddingSpeed, currentAddingSpeed);
