@@ -31,7 +31,14 @@ namespace WPF_App.Controller
         }
 
         // METHODS
-        public void AddBasicImprovement(BasicImprovement basicImprovement) => BasicImprovements.Add(basicImprovement);
+        public void AddBasicImprovements(params BasicImprovement[] basicImprovements)
+        {
+            for(int i = 0; i < basicImprovements.Length; i++)
+            {
+                BasicImprovements.Add(basicImprovements[i]);
+            }
+        }
+
         public void AddUser(User user) => User = user;
         public void LinkView(MyView view) => View = view;
         public void ChargeUser(double points) => User.Points -= points;

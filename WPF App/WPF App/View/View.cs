@@ -24,21 +24,37 @@ namespace WPF_App.View
 
         }
         // METHODS
-        public void AddButton(Button button) => buttons.Add(button);
+        public void AddButtons(params Button[] buttons)
+        {
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                Buttons.Add(buttons[i]);
+            }
+        }
+
         public void AddLabel(Label label) => Label = label;
         public void LinkWithUser(User user) => User = user;
+
+        public void SetButtonsTexts(params int[] prices)
+        {
+            for (int i = 0; i < buttons.Count; i++)
+            {
+                Buttons[i].Content = prices[i];
+            }
+        }
 
         public void SetButtonText(int price, int index)
         {
             buttons[index].Content = price;
         }
 
-        public void SetLabelText(double points)
+            public void SetLabelText(double points)
         {
             if (User.Points < 10000)
             {
-                const int Digits = 2;
-                label.Content = Math.Round(points, Digits);
+                const int Digits = 1;
+                double pointsToDisplay = Math.Round(points, Digits);
+                label.Content = pointsToDisplay;
             }
             else
             {

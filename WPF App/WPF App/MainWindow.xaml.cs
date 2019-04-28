@@ -37,26 +37,11 @@ namespace WPF_App
             // main click
             view.AddLabel(ScoreLabel);
             // improvmenets
-            view.AddButton(Improvement1Button);
-            view.AddButton(Improvement2Button);
-            view.AddButton(Improvement3Button);
-            view.AddButton(Improvement4Button);
-            view.AddButton(Improvement5Button);
-            view.AddButton(Improvement6Button);
+            view.AddButtons(Improvement1Button, Improvement2Button, Improvement3Button, Improvement4Button, Improvement5Button, Improvement6Button);
 
-            view.SetButtonText(BI1.StartingPrice, 0);
-            view.SetButtonText(BI2.StartingPrice, 1);
-            view.SetButtonText(BI3.StartingPrice, 2);
-            view.SetButtonText(BI4.StartingPrice, 3);
-            view.SetButtonText(BI5.StartingPrice, 4);
-            view.SetButtonText(BI6.StartingPrice, 5);
+            view.SetButtonsTexts(BI1.StartingPrice, BI2.StartingPrice, BI3.StartingPrice, BI4.StartingPrice, BI5.StartingPrice, BI6.StartingPrice);
 
-            controller.AddBasicImprovement(BI1);
-            controller.AddBasicImprovement(BI2);
-            controller.AddBasicImprovement(BI3);
-            controller.AddBasicImprovement(BI4);
-            controller.AddBasicImprovement(BI5);
-            controller.AddBasicImprovement(BI6);
+            controller.AddBasicImprovements(BI1, BI2, BI3, BI4, BI5, BI6);
 
             controller.AddUser(user);
             //ConnSQL database = new ConnSQL();
