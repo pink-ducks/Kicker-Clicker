@@ -14,13 +14,13 @@ namespace WPF_App.Controller
     {
         private static DispatcherTimer _timer = new DispatcherTimer();
         private User _user = new User();
-        private BasicImprovement _basicImprovement = new BasicImprovement();
+        private List<BasicImprovement> _basicImprovements = new List<BasicImprovement>();
         private MyView _view = new MyView();
 
         public User User { get => _user; set => _user = value; }
-        public BasicImprovement BasicImprovement { get => _basicImprovement; set => _basicImprovement = value; }
         public MyView View { get => _view; set => _view = value; }
         public static DispatcherTimer Timer { get => _timer; set => _timer = value; }
+        public List<BasicImprovement> BasicImprovements { get => _basicImprovements; set => _basicImprovements = value; }
 
         // CONSTRUCTOR
         public MyController()
@@ -31,15 +31,15 @@ namespace WPF_App.Controller
         }
 
         // METHODS
-        public void AddBasicImprovement(BasicImprovement basicImprovement) => BasicImprovement = basicImprovement;
+        public void AddBasicImprovement(BasicImprovement basicImprovement) => BasicImprovements.Add(basicImprovement);
         public void AddUser(User user) => User = user;
         public void LinkView(MyView view) => View = view;
         public void ChargeUser(double points) => User.Points -= points;
         public void AddPointsToUser(double points) => User.Points += points;
         public void IncreaseUserAdditionSpeed(double speed) => User.SpeedOfAddingPoints += speed;
-        public void UpgradeBasicImprovement()
+        public void UpgradeBasicImprovement(int index)
         {
-            BasicImprovement.Upgrade();
+            BasicImprovements[index].Upgrade();
         }
         private void AddPointsPerSecond(object sender, EventArgs e)
         {

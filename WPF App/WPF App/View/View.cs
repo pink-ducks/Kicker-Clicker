@@ -11,12 +11,12 @@ namespace WPF_App.View
 {
     public class MyView
     {
-        Button button = new Button();
+        List<Button> buttons = new List<Button>();
         Label label = new Label();
         User user = new User();
-        public Button Button { get => button; set => button = value; }
         public Label Label { get => label; set => label = value; }
         public User User { get => user; set => user = value; }
+        public List<Button> Buttons { get => buttons; set => buttons = value; }
 
         // CONSTRUCTORS
         public MyView()
@@ -24,11 +24,15 @@ namespace WPF_App.View
 
         }
         // METHODS
-        public void AddButton(Button button) => Button = button;
+        public void AddButton(Button button) => buttons.Add(button);
         public void AddLabel(Label label) => Label = label;
         public void LinkWithUser(User user) => User = user;
 
-        public void SetButtonText(int price) => Button.Content = price;
+        public void SetButtonText(int price, int index)
+        {
+            buttons[index].Content = price;
+        }
+
         public void SetLabelText(double points)
         {
             if (User.Points < 10000)

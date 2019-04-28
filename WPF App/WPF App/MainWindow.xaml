@@ -24,27 +24,27 @@
             </Grid>
             <Grid x:Name="improvement2Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="157,191,0,-76" >
                 <Rectangle x:Name="improvement2Rectangle" Fill="#2E4053" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
-                <Button x:Name="Improvement2Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="30"/>
+                <Button x:Name="Improvement2Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="30" Click="Improvement2Button_Click"/>
                 <Image  x:Name="improvement2Image" Source = "Sources/test.png" HorizontalAlignment="Center" Height="95" VerticalAlignment="Top" Width="100"/>
             </Grid>
             <Grid x:Name="improvement3Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="285,191,0,-76" >
                 <Rectangle x:Name="improvement3Rectangle" Fill="#2E4053" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
-                <Button x:Name="Improvement3Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="30"/>
+                <Button x:Name="Improvement3Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="30" Click="Improvement3Button_Click"/>
                 <Image  x:Name="improvement3Image" Source = "Sources/test.png" HorizontalAlignment="Center" Height="95" VerticalAlignment="Top" Width="100"/>
             </Grid>
             <Grid x:Name="improvement4Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="414,191,0,-76" >
                 <Rectangle x:Name="improvement4Rectangle" Fill="#2E4053" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
-                <Button x:Name="Improvement4Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="30"/>
+                <Button x:Name="Improvement4Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="30" Click="Improvement4Button_Click"/>
                 <Image  x:Name="improvement4Image" Source = "Sources/test.png" HorizontalAlignment="Center" Height="95" VerticalAlignment="Top" Width="100"/>
             </Grid>
             <Grid x:Name="improvement5Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="542,191,0,-76" >
                 <Rectangle x:Name="improvement5Rectangle" Fill="#2E4053" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
-                <Button x:Name="Improvement5Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="30"/>
+                <Button x:Name="Improvement5Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="30" Click="Improvement5Button_Click"/>
                 <Image  x:Name="improvement5Image" Source = "Sources/test.png" HorizontalAlignment="Center" Height="95" VerticalAlignment="Top" Width="100"/>
             </Grid>
             <Grid x:Name="improvement6Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="671,191,0,-76" >
                 <Rectangle x:Name="improvement6Rectangle" Fill="#2E4053" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
-                <Button x:Name="Improvement6Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="30"/>
+                <Button x:Name="Improvement6Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="30" Click="Improvement6Button_Click"/>
                 <Image  x:Name="improvement6Image" Source = "Sources/test.png" HorizontalAlignment="Center" Height="95" VerticalAlignment="Top" Width="100"/>
             </Grid>
         </Grid>
