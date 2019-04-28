@@ -12,11 +12,13 @@ namespace WPF_App.View
     public class MyView
     {
         List<Button> buttons = new List<Button>();
+        List<Label> impovementsLevelsLabels = new List<Label>();
         Label label = new Label();
         User user = new User();
         public Label Label { get => label; set => label = value; }
         public User User { get => user; set => user = value; }
         public List<Button> Buttons { get => buttons; set => buttons = value; }
+        public List<Label> ImpovementsLevelsLabels { get => impovementsLevelsLabels; set => impovementsLevelsLabels = value; }
 
         // CONSTRUCTORS
         public MyView()
@@ -31,9 +33,23 @@ namespace WPF_App.View
                 Buttons.Add(buttons[i]);
             }
         }
+        public void AddImprovementsLevelsLabels(params Label[] labels)
+        {
+            for (int i = 0; i < labels.Length; i++)
+            {
+                ImpovementsLevelsLabels.Add(labels[i]);
+            }
+        }
 
         public void AddLabel(Label label) => Label = label;
         public void LinkWithUser(User user) => User = user;
+        // setters
+        public void UpgradeLevelLabel(int index)
+        {
+            int updatedLevel = int.Parse(ImpovementsLevelsLabels[index].Content.ToString());
+            updatedLevel++;
+            ImpovementsLevelsLabels[index].Content = updatedLevel.ToString();
+        }
 
         public void SetButtonsTexts(params int[] prices)
         {
