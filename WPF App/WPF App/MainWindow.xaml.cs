@@ -36,6 +36,7 @@ namespace WPF_App
             controller.LinkView(view);
             // main click
             view.AddLabel(ScoreLabel);
+            view.AddSpeedOfAddingPointsLabel(SpeedOfAddingPointsLabel);
             // improvmenets
             view.AddButtons(Improvement1Button, Improvement2Button, Improvement3Button, Improvement4Button, Improvement5Button, Improvement6Button);
             view.AddImprovementsLevelsLabels(Improvement1Label, Improvement2Label, Improvement3Label, Improvement4Label, Improvement5Label, Improvement6Label);
@@ -67,6 +68,7 @@ namespace WPF_App
                 controller.UpgradeBasicImprovement(0);
                 view.SetButtonText(BI1.CurrentPrice, 0);
                 view.UpgradeLevelLabel(0);
+                view.SetSpeedOfAddingPointsLabelText(user.SpeedOfAddingPoints);
             }
         }
 
@@ -82,6 +84,7 @@ namespace WPF_App
                 controller.UpgradeBasicImprovement(1);
                 view.SetButtonText(BI2.CurrentPrice, 1);
                 view.UpgradeLevelLabel(1);
+                view.SetSpeedOfAddingPointsLabelText(user.SpeedOfAddingPoints);
             }
         }
 
@@ -97,6 +100,7 @@ namespace WPF_App
                 controller.UpgradeBasicImprovement(2);
                 view.SetButtonText(BI3.CurrentPrice, 2);
                 view.UpgradeLevelLabel(2);
+                view.SetSpeedOfAddingPointsLabelText(user.SpeedOfAddingPoints);
             }
         }
 
@@ -112,6 +116,7 @@ namespace WPF_App
                 controller.UpgradeBasicImprovement(3);
                 view.SetButtonText(BI4.CurrentPrice, 3);
                 view.UpgradeLevelLabel(3);
+                view.SetSpeedOfAddingPointsLabelText(user.SpeedOfAddingPoints);
             }
         }
 
@@ -127,6 +132,7 @@ namespace WPF_App
                 controller.UpgradeBasicImprovement(4);
                 view.SetButtonText(BI5.CurrentPrice, 4);
                 view.UpgradeLevelLabel(4);
+                view.SetSpeedOfAddingPointsLabelText(user.SpeedOfAddingPoints);
             }
         }
 
@@ -142,6 +148,7 @@ namespace WPF_App
                 controller.UpgradeBasicImprovement(5);
                 view.SetButtonText(BI6.CurrentPrice, 5);
                 view.UpgradeLevelLabel(5);
+                view.SetSpeedOfAddingPointsLabelText(user.SpeedOfAddingPoints);
             }
 
         }

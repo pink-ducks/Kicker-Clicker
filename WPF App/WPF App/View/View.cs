@@ -14,8 +14,10 @@ namespace WPF_App.View
         List<Button> buttons = new List<Button>();
         List<Label> impovementsLevelsLabels = new List<Label>();
         Label label = new Label();
+        Label speedOfAddingPointsLabel = new Label();
         User user = new User();
         public Label Label { get => label; set => label = value; }
+        public Label SpeedOfAddingPointsLabel { get => speedOfAddingPointsLabel; set => speedOfAddingPointsLabel = value; }
         public User User { get => user; set => user = value; }
         public List<Button> Buttons { get => buttons; set => buttons = value; }
         public List<Label> ImpovementsLevelsLabels { get => impovementsLevelsLabels; set => impovementsLevelsLabels = value; }
@@ -42,6 +44,7 @@ namespace WPF_App.View
         }
 
         public void AddLabel(Label label) => Label = label;
+        public void AddSpeedOfAddingPointsLabel(Label speedOfAddingPointsLabel) => SpeedOfAddingPointsLabel = speedOfAddingPointsLabel;
         public void LinkWithUser(User user) => User = user;
         // setters
         public void UpgradeLevelLabel(int index)
@@ -64,7 +67,7 @@ namespace WPF_App.View
             buttons[index].Content = price;
         }
 
-            public void SetLabelText(double points)
+        public void SetLabelText(double points)
         {
             if (User.Points < 10000)
             {
@@ -75,6 +78,20 @@ namespace WPF_App.View
             else
             {
                 label.Content = points;
+            }
+
+        }
+        public void SetSpeedOfAddingPointsLabelText(double speedOfAddingPoints)
+        {
+            if (User.SpeedOfAddingPoints < 10000)
+            {
+                const int Digits = 1;
+                double pointsAddingSPeedToDisplay = Math.Round(speedOfAddingPoints, Digits);
+                speedOfAddingPointsLabel.Content = pointsAddingSPeedToDisplay;
+            }
+            else
+            {
+                speedOfAddingPointsLabel.Content = speedOfAddingPoints;
             }
 
         }
