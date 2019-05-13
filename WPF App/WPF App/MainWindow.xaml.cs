@@ -40,6 +40,7 @@ namespace WPF_App
             // improvmenets
             view.AddButtons(Improvement1Button, Improvement2Button, Improvement3Button, Improvement4Button, Improvement5Button, Improvement6Button);
             view.AddImprovementsLevelsLabels(Improvement1Label, Improvement2Label, Improvement3Label, Improvement4Label, Improvement5Label, Improvement6Label);
+            view.AddImprovementImages(improvement1Image, improvement2Image, improvement3Image, improvement4Image, improvement5Image, improvement6Image);
             view.SetButtonsTexts(BI1.StartingPrice, BI2.StartingPrice, BI3.StartingPrice, BI4.StartingPrice, BI5.StartingPrice, BI6.StartingPrice);
 
             controller.AddBasicImprovements(BI1, BI2, BI3, BI4, BI5, BI6);
@@ -69,6 +70,8 @@ namespace WPF_App
                 view.SetButtonText(BI1.CurrentPrice, 0);
                 view.UpgradeLevelLabel(0);
                 view.SetSpeedOfAddingPointsLabelText(user.SpeedOfAddingPoints);
+                // update pic
+                view.UpdateBasicImprovementPic(0, BI1.NumberOfUpgrades);
             }
         }
 
