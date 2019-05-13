@@ -9,18 +9,18 @@
         WindowState="Maximized">
     <Viewbox StretchDirection="Both" Stretch="Uniform">
         <Grid>
-            <Button x:Name="BallButton" Click="ClickButton_Click" SnapsToDevicePixels="True" VerticalAlignment="Bottom" Height="240" Width="120" Margin="336,-90,336,90" >
+            <Button x:Name="BallButton" Click="ClickButton_Click" SnapsToDevicePixels="True" VerticalAlignment="Bottom" Height="240" Width="120" Margin="336,-54,336,75" >
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="Sources/ball.png" />
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Label x:Name="ScoreLabel" Content="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="100" Width="792" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei" FontSize="36" RenderTransformOrigin="0.504,0" Margin="0,0,0,54"/>
+            <Label x:Name="ScoreLabel" Content="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="100" Width="792" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei" FontSize="36" RenderTransformOrigin="0.504,0" Margin="0,-78,0,239"/>
             <Grid x:Name="improvement1Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="28,191,0,-76">
                 <Rectangle x:Name="improvement1Rectangle" Fill="#2E4053" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
                 <Button x:Name="Improvement1Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement1Button_Click"/>
-                <Image Source = "Sources/test.png" x:Name="improvement1Image" HorizontalAlignment="Center" Height="95" VerticalAlignment="Top" Width="100"/>
+                <Image Source = "Sources/00.png" x:Name="improvement1Image" HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" Margin="10,10,10,0"/>
             </Grid>
             <Grid x:Name="improvement2Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="157,191,0,-76" >
                 <Rectangle x:Name="improvement2Rectangle" Fill="#2E4053" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
@@ -53,7 +53,7 @@
             <Label x:Name="Improvement4Label" Content="0" Margin="414,316,278,-76" Width="100" HorizontalContentAlignment="Center" FontSize="8"/>
             <Label x:Name="Improvement5Label" Content="0" Margin="542,316,150,-76" Width="100" HorizontalContentAlignment="Center" FontSize="8"/>
             <Label x:Name="Improvement6Label" Content="0" Margin="671,316,21,-76" Width="100" HorizontalContentAlignment="Center" FontSize="8"/>
-            <Label x:Name="SpeedOfAddingPointsLabel" Content="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="100" Width="792" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei" FontSize="20" RenderTransformOrigin="0.504,0" Margin="0,0,0,29"/>
+            <Label x:Name="SpeedOfAddingPointsLabel" Content="+0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="100" Width="792" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei" FontSize="20" RenderTransformOrigin="0.504,0" Margin="0,0,0,51"/>
         </Grid>
 
     </Viewbox>
