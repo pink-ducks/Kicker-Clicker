@@ -102,7 +102,11 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Sources\01.png" />
+    <Resource Include="Sources\00.png" />
+    <Resource Include="Sources\02.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Sources\ball.png" />
   </ItemGroup>

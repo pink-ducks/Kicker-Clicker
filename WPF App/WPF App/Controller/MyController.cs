@@ -53,5 +53,6 @@ namespace WPF_App.Controller
             User.Points += User.SpeedOfAddingPoints;
             View.SetLabelText(User.Points);
         }
+
     }
 }
