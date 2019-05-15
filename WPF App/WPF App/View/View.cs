@@ -80,30 +80,30 @@ namespace WPF_App.View
 
         public void SetLabelText(double points)
         {
-            if (User.Points < 10000)
-            {
+            //if (User.Points < 10000)
+            //{
                 const int Digits = 1;
                 double pointsToDisplay = Math.Round(points, Digits);
                 label.Content = pointsToDisplay;
-            }
-            else
-            {
-                label.Content = points;
-            }
+            //}
+            //else
+            //{
+            //    label.Content = points;
+            //}
 
         }
         public void SetSpeedOfAddingPointsLabelText(double speedOfAddingPoints)
         {
-            if (User.SpeedOfAddingPoints < 10000)
-            {
+            //if (User.SpeedOfAddingPoints < 10000)
+            //{
                 const int Digits = 1;
                 double pointsAddingSPeedToDisplay = Math.Round(speedOfAddingPoints, Digits);
                 speedOfAddingPointsLabel.Content = "+" + pointsAddingSPeedToDisplay;
-            }
-            else
-            {
-                speedOfAddingPointsLabel.Content = "+" + speedOfAddingPoints;
-            }
+            //}
+            //else
+            //{
+            //    speedOfAddingPointsLabel.Content = "+" + speedOfAddingPoints;
+            //}
 
         }
         public void UpdateBasicImprovementPic(int index, int level)
