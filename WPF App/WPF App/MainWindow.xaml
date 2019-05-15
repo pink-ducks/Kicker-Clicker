@@ -25,7 +25,7 @@
             <Grid x:Name="improvement2Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="157,191,0,-76" >
                 <Rectangle x:Name="improvement2Rectangle" Fill="#2E4053" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
                 <Button x:Name="Improvement2Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement2Button_Click"/>
-                <Image  x:Name="improvement2Image" Source = "Sources/test.png" HorizontalAlignment="Center" Height="95" VerticalAlignment="Top" Width="100"/>
+                <Image  x:Name="improvement2Image" Source = "Sources/10.png" HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" Margin="10,10,10,0"/>
             </Grid>
             <Grid x:Name="improvement3Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="285,191,0,-76" >
                 <Rectangle x:Name="improvement3Rectangle" Fill="#2E4053" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
