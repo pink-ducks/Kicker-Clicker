@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
+using System.Windows.Threading;
 using System.Windows.Controls;
 using WPF_App.Model;
 using WPF_App;
@@ -12,15 +14,18 @@ namespace WPF_App.View
 {
     public class MyView
     {
+        private DispatcherTimer timer = new DispatcherTimer();
         List<Button> buttons = new List<Button>();
         List<Label> impovementsLevelsLabels = new List<Label>();
         List<Image> improvementsImages = new List<Image>();
         Label label = new Label();
         Label speedOfAddingPointsLabel = new Label();
+        Label clickPointAddLabel = new Label();
         User user = new User();
 
         public Label Label { get => label; set => label = value; }
         public Label SpeedOfAddingPointsLabel { get => speedOfAddingPointsLabel; set => speedOfAddingPointsLabel = value; }
+        public Label ClickPointAddLabel { get => clickPointAddLabel; set => clickPointAddLabel = value; }
         public User User { get => user; set => user = value; }
         public List<Button> Buttons { get => buttons; set => buttons = value; }
         public List<Label> ImpovementsLevelsLabels { get => impovementsLevelsLabels; set => impovementsLevelsLabels = value; }
@@ -56,6 +61,7 @@ namespace WPF_App.View
 
         public void AddLabel(Label label) => Label = label;
         public void AddSpeedOfAddingPointsLabel(Label speedOfAddingPointsLabel) => SpeedOfAddingPointsLabel = speedOfAddingPointsLabel;
+        public void AddClickPointAddLabel(Label clickPointAddLabel) => ClickPointAddLabel = clickPointAddLabel;
         public void LinkWithUser(User user) => User = user;
         // setters
         public void UpgradeLevelLabel(int index)
@@ -106,6 +112,25 @@ namespace WPF_App.View
             //}
 
         }
+        public void SetClickPointAddLabelText(double pointsPerClick)
+        {
+            const int Digits = 1;
+            double pointsPerClickToDisplay = Math.Round(pointsPerClick, Digits);
+            clickPointAddLabel.Content = "+" + pointsPerClickToDisplay;
+        }
+        public void ClickPointAddLabelAnimation()
+        {
+            clickPointAddLabel.Visibility = System.Windows.Visibility.Visible;
+        }
+        //    timer.Elapsed += OnTimedEvent;
+        //    timer.AutoReset = true;
+        //    timer.Enabled = true;
+        //}
+        //public void OnTimedEvent(Object source, ElapsedEventArgs e)
+        //{
+        //    clickPointAddLabel.Visibility = System.Windows.Visibility.Hidden;
+        //}
+
         public void UpdateBasicImprovementPic(int index, int level)
         {
             if(level == 5)
