@@ -26,6 +26,7 @@ namespace WPF_App
         BasicImprovement BI4 = new BasicImprovement(12000, 47); // MODEL
         BasicImprovement BI5 = new BasicImprovement(130000, 260); // MODEL
         BasicImprovement BI6 = new BasicImprovement(1400000, 1400); // MODEL
+        DoubleClicker doubleClicker = new DoubleClicker(50); // MODEL
         MyView view = new MyView(); // VIEW
         MyController controller = new MyController(); // CONTROLLER
 
@@ -44,7 +45,10 @@ namespace WPF_App
             view.SetButtonsTexts(BI1.StartingPrice, BI2.StartingPrice, BI3.StartingPrice, BI4.StartingPrice, BI5.StartingPrice, BI6.StartingPrice);
 
             controller.AddBasicImprovements(BI1, BI2, BI3, BI4, BI5, BI6);
-
+            // double clicker
+            controller.AddBonusImprovements(doubleClicker);
+            view.AddButtons(BonusImprovement1Button);
+            //
             controller.AddUser(user);
             //ConnSQL database = new ConnSQL();
             //database.Connection();
@@ -156,6 +160,14 @@ namespace WPF_App
                 view.SetSpeedOfAddingPointsLabelText(user.SpeedOfAddingPoints);
             }
 
+        }
+        private void BonusImprovement1Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (user.Points >= doubleClicker.CurrentPrice)
+            {
+                controller.UpgradeBonusImprovement(0);
+                view.SetButtonText(doubleClicker.CurrentPrice, 6);
+            }
         }
     }
 }
