@@ -34,27 +34,27 @@
                 <Image Source = "Sources/00.png" x:Name="improvement1Image" HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" Margin="6.622,10,10,0" Grid.Column="1" OpacityMask="#FFEBEAEA"/>
             </Grid>
             <Grid x:Name="improvement2Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="99.999" Margin="192.723,73.46,0,0" >
-                <Rectangle x:Name="improvement2Rectangle" Fill="#2E4053" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
-                <Button x:Name="Improvement2Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement2Button_Click"/>
+                <Rectangle x:Name="improvement2Rectangle" Fill="White" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
+                <Button x:Name="Improvement2Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement2Button_Click" Background="#FFE7073F"/>
                 <Image  x:Name="improvement2Image" Source = "Sources/10.png" HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" Margin="10,10,10,0"/>
             </Grid>
             <Grid x:Name="improvement3Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="49.557,190.334,0,-45.951" >
-                <Rectangle x:Name="improvement3Rectangle" Fill="#2E4053" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
+                <Rectangle x:Name="improvement3Rectangle" Fill="White" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
                 <Button x:Name="Improvement3Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement3Button_Click" Background="#FFE7073F" FontFamily="/Sources/#Poppins"/>
-                <Image  x:Name="improvement3Image" Source = "Sources/test.png" HorizontalAlignment="Center" Height="95" VerticalAlignment="Top" Width="100"/>
+                <Image  x:Name="improvement3Image" Source = "Sources/test.png" HorizontalAlignment="Center" Height="95" VerticalAlignment="Top" Width="100" OpacityMask="#FFFDF8F8"/>
             </Grid>
             <Grid x:Name="improvement4Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="229.645,-52.646,0,0" Grid.Column="4" >
-                <Rectangle x:Name="improvement4Rectangle" Fill="#2E4053" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
+                <Rectangle x:Name="improvement4Rectangle" Fill="White" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
                 <Button x:Name="Improvement4Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement4Button_Click" Background="#FFE7073F" FontFamily="/Sources/#Poppins"/>
                 <Image  x:Name="improvement4Image" Source = "Sources/test.png" HorizontalAlignment="Center" Height="95" VerticalAlignment="Top" Width="100"/>
             </Grid>
             <Grid x:Name="improvement5Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="80.353,74.83,0,0" Grid.Column="4" >
-                <Rectangle x:Name="improvement5Rectangle" Fill="#2E4053" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
+                <Rectangle x:Name="improvement5Rectangle" Fill="White" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
                 <Button x:Name="Improvement5Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement5Button_Click" Background="#FFE7073F" FontFamily="/Sources/#Poppins"/>
                 <Image  x:Name="improvement5Image" Source = "Sources/test.png" HorizontalAlignment="Center" Height="95" VerticalAlignment="Top" Width="100"/>
             </Grid>
             <Grid x:Name="improvement6Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="229.646,188.224,0,-43.841" Grid.Column="4" >
-                <Rectangle x:Name="improvement6Rectangle" Fill="#2E4053" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
+                <Rectangle x:Name="improvement6Rectangle" Fill="White" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
                 <Button x:Name="Improvement6Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement6Button_Click" Background="#FFE7073F" FontFamily="/Sources/#Poppins"/>
                 <Image  x:Name="improvement6Image" Source = "Sources/test.png" HorizontalAlignment="Center" Height="95" VerticalAlignment="Top" Width="100"/>
             </Grid>
