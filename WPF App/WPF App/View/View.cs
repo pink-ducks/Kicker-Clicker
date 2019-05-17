@@ -121,15 +121,15 @@ namespace WPF_App.View
         public void ClickPointAddLabelAnimation()
         {
             clickPointAddLabel.Visibility = System.Windows.Visibility.Visible;
+            timer.Tick += new EventHandler(HidingClickPointAddLabelAtTimerTick);
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 200);
+            timer.Start();            
         }
-        //    timer.Elapsed += OnTimedEvent;
-        //    timer.AutoReset = true;
-        //    timer.Enabled = true;
-        //}
-        //public void OnTimedEvent(Object source, ElapsedEventArgs e)
-        //{
-        //    clickPointAddLabel.Visibility = System.Windows.Visibility.Hidden;
-        //}
+        private void HidingClickPointAddLabelAtTimerTick(object sender, EventArgs e)
+        {
+            clickPointAddLabel.Visibility = System.Windows.Visibility.Hidden;
+            timer.Stop();
+        }
 
         public void UpdateBasicImprovementPic(int index, int level)
         {
