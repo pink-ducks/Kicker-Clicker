@@ -17,21 +17,30 @@ namespace WPF_App.Controller
             View.SetClickPointAddLabelText(User.PointsPerClick);
         }
 
-        public void ClickBasicImprovement(BasicImprovement i, int index)
+        public void ClickBasicImprovement(int index)
         {
-            if(i.checkPrice(User)) // check user's points
+            if(BasicImprovements[index].checkPrice(User)) // check user's points
             {
-                this.ChargeUser(i.CurrentPrice);
+                this.ChargeUser(BasicImprovements[index].CurrentPrice);
                 View.SetLabelText(User.Points);
 
                 //ScoreLabel.Content = user.Points;
-                this.IncreaseUserAdditionSpeed(i.SpeedOfAddingPoints);
+                this.IncreaseUserAdditionSpeed(BasicImprovements[index].SpeedOfAddingPoints);
                 this.UpgradeBasicImprovement(index);
-                View.SetButtonText(i.CurrentPrice, index);
+                View.SetButtonText(BasicImprovements[index].CurrentPrice, index);
                 View.UpgradeLevelLabel(index);
                 View.SetSpeedOfAddingPointsLabelText(User.SpeedOfAddingPoints);
                 // update pic
-                View.UpdateBasicImprovementPic(index, i.NumberOfUpgrades);
+                View.UpdateBasicImprovementPic(index, BasicImprovements[index].NumberOfUpgrades);
+            }
+        }
+
+        public void ClickDoubleClicker()
+        {
+            if (User.Points >= DoubleClicker.CurrentPrice)
+            {
+                DoubleClicker.Upgrade();
+                View.SetButtonText(DoubleClicker.CurrentPrice, 6);
             }
         }
     }

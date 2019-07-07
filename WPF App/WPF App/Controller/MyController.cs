@@ -15,14 +15,14 @@ namespace WPF_App.Controller
         private static DispatcherTimer _timer = new DispatcherTimer();
         private User _user = new User();
         private List<BasicImprovement> _basicImprovements = new List<BasicImprovement>();
-        private List<Improvement> _bonusImprovements = new List<Improvement>();
         private MyView _view = new MyView();
+        private DoubleClicker _doubleClicker = new DoubleClicker(50);
 
         public User User { get => _user; set => _user = value; }
         public MyView View { get => _view; set => _view = value; }
         public static DispatcherTimer Timer { get => _timer; set => _timer = value; }
         public List<BasicImprovement> BasicImprovements { get => _basicImprovements; set => _basicImprovements = value; }
-        public List<Improvement> BonusImprovements { get => _bonusImprovements; set => _bonusImprovements = value; }
+        public DoubleClicker DoubleClicker { get => _doubleClicker; set => _doubleClicker = value; }
 
         // CONSTRUCTOR
         public MyController()
@@ -41,14 +41,6 @@ namespace WPF_App.Controller
             }
         }
 
-        public void AddBonusImprovements(params Improvement[] bonusImprovements)
-        {
-            for (int i = 0; i < bonusImprovements.Length; i++)
-            {
-                BonusImprovements.Add(bonusImprovements[i]);
-            }
-        }
-
         public void AddUser(User user) => User = user;
         public void LinkView(MyView view) => View = view;
         public void ChargeUser(double points) => User.Points -= points;
@@ -57,10 +49,6 @@ namespace WPF_App.Controller
         public void UpgradeBasicImprovement(int index)
         {
             BasicImprovements[index].Upgrade();
-        }
-        public void UpgradeBonusImprovement(int index)
-        {
-            BonusImprovements[index].Upgrade();
         }
         private void AddPointsPerSecond(object sender, EventArgs e)
         {

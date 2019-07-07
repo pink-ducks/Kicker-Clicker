@@ -66,6 +66,7 @@
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Model\BasicImprovement.cs" />
     <Compile Include="Model\DoubleClicker.cs" />
+    <Compile Include="ProgramData.cs" />
     <Compile Include="View\View.cs" />
     <Compile Include="Model\ConnSQL.cs" />
     <Compile Include="Model\Improvement.cs" />
