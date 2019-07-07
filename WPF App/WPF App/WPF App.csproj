@@ -61,7 +61,7 @@
     </Compile>
     <Compile Include="Controller\MyController.cs" />
     <Compile Include="Model\BasicImprovement.cs" />
-    <Compile Include="Model\BonusImprovement.cs" />
+    <Compile Include="Model\DoubleClicker.cs" />
     <Compile Include="View\View.cs" />
     <Compile Include="Model\ConnSQL.cs" />
     <Compile Include="Model\Improvement.cs" />

@@ -58,6 +58,11 @@
                 <Button x:Name="Improvement6Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement6Button_Click" Background="#FFE7073F" FontFamily="/Sources/#Poppins"/>
                 <Image  x:Name="improvement6Image" Source = "Sources/test.png" HorizontalAlignment="Center" Height="95" VerticalAlignment="Top" Width="100"/>
             </Grid>
+            <Grid x:Name="BonusImprovement1Grid" HorizontalAlignment="Left" Height="80" Margin="281,277,0,-57.617" VerticalAlignment="Top" Width="60">
+                <Rectangle x:Name="BonusImprovement1Rectangle" Fill="White" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="60"/>
+                <Button x:Name="BonusImprovement1Button" Content="50" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60" Height="20" Click="BonusImprovement1Button_Click" Background="#FFE7073F" FontFamily="/Sources/#Poppins" Margin="0,0,0,30"/>
+                <Image x:Name="BonusImprovement1Image" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60"/>
+            </Grid>
             <Label x:Name="Improvement1Label" Content="0"  Foreground="White" Margin="49.557,66.816,262.499,173.184" Width="100" HorizontalContentAlignment="Center" FontSize="8"/>
             <Label x:Name="Improvement2Label" Content="0"  Foreground="White" Margin="192.722,203.46,119.334,36.54" Width="100" HorizontalContentAlignment="Center" FontSize="8"/>
             <Label x:Name="Improvement3Label" Content="0"  Foreground="White" Margin="49.557,320.334,262.499,-80.334" Width="100" HorizontalContentAlignment="Center" FontSize="8"/>
@@ -65,6 +70,7 @@
             <Label x:Name="Improvement5Label" Content="0"  Foreground="White" Margin="80.352,203.46,191.697,36.54" Width="100" HorizontalContentAlignment="Center" FontSize="8" Grid.Column="4"/>
             <Label x:Name="Improvement6Label" Content="0"  Foreground="White" Margin="229.645,313.224,42.404,-73.224" Width="100" HorizontalContentAlignment="Center" FontSize="8" Grid.Column="4"/>
             <Label x:Name="SpeedOfAddingPointsLabel" Foreground="White" Content="+0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="67.666" Width="88.468" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei" FontSize="20" RenderTransformOrigin="0.504,0" Margin="384.43,0,362.215,-25.868" Grid.ColumnSpan="5"/>
+
 
         </Grid>
 
