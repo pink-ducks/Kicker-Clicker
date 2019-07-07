@@ -60,6 +60,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controller\MyController.cs" />
+    <Compile Include="Controller\UserController.cs" />
     <Compile Include="Model\BasicImprovement.cs" />
     <Compile Include="Model\DoubleClicker.cs" />
     <Compile Include="View\View.cs" />

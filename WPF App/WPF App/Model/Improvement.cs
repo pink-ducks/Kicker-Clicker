@@ -18,5 +18,6 @@ namespace WPF_App.Model
 
         // METHODS
         public abstract void Upgrade();
+        
     }
 }
