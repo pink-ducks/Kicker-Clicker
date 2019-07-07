@@ -70,8 +70,7 @@
             <Label x:Name="Improvement5Label" Content="0"  Foreground="White" Margin="80.352,203.46,191.697,36.54" Width="100" HorizontalContentAlignment="Center" FontSize="8" Grid.Column="4"/>
             <Label x:Name="Improvement6Label" Content="0"  Foreground="White" Margin="229.645,313.224,42.404,-73.224" Width="100" HorizontalContentAlignment="Center" FontSize="8" Grid.Column="4"/>
             <Label x:Name="SpeedOfAddingPointsLabel" Foreground="White" Content="+0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="67.666" Width="88.468" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei" FontSize="20" RenderTransformOrigin="0.504,0" Margin="384.43,0,362.215,-25.868" Grid.ColumnSpan="5"/>
-
-
+            <Label x:Name="ClickPointAddLabel" Content="+0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="61" Width="61" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei" FontSize="20" RenderTransformOrigin="0.504,0" Margin="106,0,625,151" Visibility="Hidden" />
         </Grid>
 
     </Viewbox>

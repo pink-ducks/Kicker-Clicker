@@ -38,6 +38,7 @@ namespace WPF_App
             // main click
             view.AddLabel(ScoreLabel);
             view.AddSpeedOfAddingPointsLabel(SpeedOfAddingPointsLabel);
+            view.AddClickPointAddLabel(ClickPointAddLabel);
             // improvmenets
             view.AddButtons(Improvement1Button, Improvement2Button, Improvement3Button, Improvement4Button, Improvement5Button, Improvement6Button);
             view.AddImprovementsLevelsLabels(Improvement1Label, Improvement2Label, Improvement3Label, Improvement4Label, Improvement5Label, Improvement6Label);
@@ -57,8 +58,10 @@ namespace WPF_App
         // Main Click Button
         private void ClickButton_Click(object sender, RoutedEventArgs e)
         {
-            controller.AddPointsToUser(1);
+            controller.AddPointsToUser(user.PointsPerClick);
             view.SetLabelText(user.Points);
+            view.ClickPointAddLabelAnimation();
+            view.SetClickPointAddLabelText(user.PointsPerClick);
         }
         // Improvements
         private void Improvement1Button_Click(object sender, RoutedEventArgs e)
