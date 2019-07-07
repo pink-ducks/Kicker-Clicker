@@ -19,18 +19,20 @@ namespace WPF_App.Controller
 
         public void ClickBasicImprovement(BasicImprovement i, int index)
         {
-            this.ChargeUser(i.CurrentPrice);
-            View.SetLabelText(User.Points);
+            if(i.checkPrice(User)) // check user's points
+            {
+                this.ChargeUser(i.CurrentPrice);
+                View.SetLabelText(User.Points);
 
-            //ScoreLabel.Content = user.Points;
-            this.IncreaseUserAdditionSpeed(i.SpeedOfAddingPoints);
-            this.UpgradeBasicImprovement(index);
-            View.SetButtonText(i.CurrentPrice, index);
-            View.UpgradeLevelLabel(index);
-            View.SetSpeedOfAddingPointsLabelText(User.SpeedOfAddingPoints);
-            // update pic
-            View.UpdateBasicImprovementPic(index, i.NumberOfUpgrades);
+                //ScoreLabel.Content = user.Points;
+                this.IncreaseUserAdditionSpeed(i.SpeedOfAddingPoints);
+                this.UpgradeBasicImprovement(index);
+                View.SetButtonText(i.CurrentPrice, index);
+                View.UpgradeLevelLabel(index);
+                View.SetSpeedOfAddingPointsLabelText(User.SpeedOfAddingPoints);
+                // update pic
+                View.UpdateBasicImprovementPic(index, i.NumberOfUpgrades);
+            }
         }
-
     }
 }

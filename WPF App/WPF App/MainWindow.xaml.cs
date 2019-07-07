@@ -60,50 +60,33 @@ namespace WPF_App
         // Improvements
         private void Improvement1Button_Click(object sender, RoutedEventArgs e)
         {
-            if(user.Points >= BI1.CurrentPrice)
-            {
-                controller.ClickBasicImprovement(BI1, 0);
-            }
+            controller.ClickBasicImprovement(BI1, 0);
         }
 
         private void Improvement2Button_Click(object sender, RoutedEventArgs e)
         {
-            if (user.Points >= BI2.CurrentPrice)
-            {
-                controller.ClickBasicImprovement(BI2, 1);
-            }
+            controller.ClickBasicImprovement(BI2, 1);
         }
 
         private void Improvement3Button_Click(object sender, RoutedEventArgs e)
         {
-            if (user.Points >= BI3.CurrentPrice)
-            {
-                controller.ClickBasicImprovement(BI3, 2);
-            }
+            controller.ClickBasicImprovement(BI3, 2);
         }
 
         private void Improvement4Button_Click(object sender, RoutedEventArgs e)
         {
-            if (user.Points >= BI4.CurrentPrice)
-            {
-                controller.ClickBasicImprovement(BI4, 3);
-            }
+        
+            controller.ClickBasicImprovement(BI4, 3);
         }
 
         private void Improvement5Button_Click(object sender, RoutedEventArgs e)
         {
-            if (user.Points >= BI5.CurrentPrice)
-            {
-                controller.ClickBasicImprovement(BI5, 4);
-            }
+            controller.ClickBasicImprovement(BI5, 4);
         }
 
         private void Improvement6Button_Click(object sender, RoutedEventArgs e)
         {
-            if (user.Points >= BI6.CurrentPrice)
-            {
-                controller.ClickBasicImprovement(BI6, 5);
-            }
+            controller.ClickBasicImprovement(BI6, 5);
         }
         private void BonusImprovement1Button_Click(object sender, RoutedEventArgs e)
         {
