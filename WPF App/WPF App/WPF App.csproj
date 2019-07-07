@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Sources\10_BYD_2.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -118,6 +121,9 @@
     <Resource Include="Sources\10.png" />
     <Resource Include="Sources\11.png" />
     <Resource Include="Sources\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sources\10_BYD_2.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
