@@ -126,5 +126,8 @@
   <ItemGroup>
     <Resource Include="Sources\10_BYD_2.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sources\click.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
