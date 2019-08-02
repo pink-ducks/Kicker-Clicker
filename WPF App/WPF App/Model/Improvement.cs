@@ -18,5 +18,12 @@ namespace WPF_App.Model
 
         // METHODS
         public abstract void Upgrade();
+        public bool checkPrice(User u)
+        {
+            if (u.Points >= this.CurrentPrice)
+                return true;
+            else
+                return false;
+        }
     }
 }

@@ -16,11 +16,13 @@ namespace WPF_App.Controller
         private User _user = new User();
         private List<BasicImprovement> _basicImprovements = new List<BasicImprovement>();
         private MyView _view = new MyView();
+        private DoubleClicker _doubleClicker = new DoubleClicker(50);
 
         public User User { get => _user; set => _user = value; }
         public MyView View { get => _view; set => _view = value; }
         public static DispatcherTimer Timer { get => _timer; set => _timer = value; }
         public List<BasicImprovement> BasicImprovements { get => _basicImprovements; set => _basicImprovements = value; }
+        public DoubleClicker DoubleClicker { get => _doubleClicker; set => _doubleClicker = value; }
 
         // CONSTRUCTOR
         public MyController()
