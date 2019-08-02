@@ -91,6 +91,8 @@ namespace WPF_App
                 view.SetButtonText(BI2.CurrentPrice, 1);
                 view.UpgradeLevelLabel(1);
                 view.SetSpeedOfAddingPointsLabelText(user.SpeedOfAddingPoints);
+                // update pic
+                view.UpdateBasicImprovementPic(1, BI2.NumberOfUpgrades);
             }
         }
 
