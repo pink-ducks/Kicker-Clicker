@@ -16,7 +16,7 @@ namespace WPF_App.Controller
         private User _user = new User();
         private List<BasicImprovement> _basicImprovements = new List<BasicImprovement>();
         private MyView _view = new MyView();
-        private DoubleClicker _doubleClicker = new DoubleClicker(50);
+        private DoubleClicker _doubleClicker = new DoubleClicker(200);
 
         public User User { get => _user; set => _user = value; }
         public MyView View { get => _view; set => _view = value; }

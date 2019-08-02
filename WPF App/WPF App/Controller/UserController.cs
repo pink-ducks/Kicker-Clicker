@@ -40,7 +40,7 @@ namespace WPF_App.Controller
             {
                 this.ChargeUser(DoubleClicker.CurrentPrice);
                 View.SetScoreLabelText(User.Points);
-
+                View.UpgradeLevelLabel(6); // 6 -> DoubleClicker index 
                 DoubleClicker.Upgrade();
                 this.User.PointsPerClick = this.User.PointsPerClick * 2;
                 View.SetButtonText(DoubleClicker.CurrentPrice, 6);

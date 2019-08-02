@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPF_App"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        WindowState="Maximized" Background="#FF2D0535">
+        WindowState="Maximized" Background="#FF480855">
     <Viewbox StretchDirection="Both" Stretch="Uniform">
         <Grid Height="269.383" Width="835.113">
             <Grid.ColumnDefinitions>
@@ -61,7 +61,7 @@
 
             <Grid x:Name="BonusImprovement1Grid" HorizontalAlignment="Left" Height="80" Margin="281,277,0,-57.617" VerticalAlignment="Top" Width="60">
                 <Rectangle x:Name="BonusImprovement1Rectangle" Fill="White" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="60"/>
-                <Button x:Name="BonusImprovement1Button" Content="50" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60" Height="20" Click="BonusImprovement1Button_Click" Background="#FFE7073F" FontFamily="/Sources/#Poppins" Margin="0,0,0,30"/>
+                <Button x:Name="BonusImprovement1Button" Content="200" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60" Height="20" Click="BonusImprovement1Button_Click" Background="#FFE7073F" FontFamily="/Sources/#Poppins" Margin="0,0,0,30"/>
                 <Image x:Name="BonusImprovement1Image" HorizontalAlignment="Center" Height="30" Width="30" Source="Sources/click.png" VerticalAlignment="Top"/>
             </Grid>
             <Label x:Name="Improvement1Label" Content="0"  Foreground="White" Margin="49.557,66.816,262.499,173.184" Width="100" HorizontalContentAlignment="Center" FontSize="8"/>
@@ -70,8 +70,9 @@
             <Label x:Name="Improvement4Label" Content="0"  Foreground="White" Margin="229.645,71.816,42.404,168.184" Width="100" HorizontalContentAlignment="Center" FontSize="8" Grid.Column="4"/>
             <Label x:Name="Improvement5Label" Content="0"  Foreground="White" Margin="80.352,203.46,191.697,36.54" Width="100" HorizontalContentAlignment="Center" FontSize="8" Grid.Column="4"/>
             <Label x:Name="Improvement6Label" Content="0"  Foreground="White" Margin="229.645,313.224,42.404,-73.224" Width="100" HorizontalContentAlignment="Center" FontSize="8" Grid.Column="4"/>
-            <Label x:Name="SpeedOfAddingPointsLabel" Foreground="White" Content="+0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="67.666" Width="88.468" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei" FontSize="20" RenderTransformOrigin="0.504,0" Margin="384.43,0,362.215,-25.868" Grid.ColumnSpan="5"/> 
-            <Label x:Name="ClickPointAddLabel" Content="+0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="61" Width="61" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei" FontSize="20" RenderTransformOrigin="0.504,0" Margin="392,0,10,97.383" Grid.ColumnSpan="4" Visibility="Hidden" />
+            <Label x:Name="SpeedOfAddingPointsLabel" Foreground="White" Content="+0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="67.666" Width="88.468" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei" FontSize="20" RenderTransformOrigin="0.504,0" Margin="384.43,0,362.215,-25.868" Grid.ColumnSpan="5"/>
+            <Label x:Name="ClickPointAddLabel" Content="+0" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="61" Width="61" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei" FontSize="20" RenderTransformOrigin="0.504,0" Margin="392,0,10,97.383" Grid.ColumnSpan="4" Visibility="Hidden" MouseLeftButtonDown="ClickPointAddLabel_Click"/>
+            <Label x:Name="DoubleClickerLabel" Content="0"  Foreground="White" Margin="281,328,71,-87.617" HorizontalContentAlignment="Center" FontSize="8"/>
 
         </Grid>
 

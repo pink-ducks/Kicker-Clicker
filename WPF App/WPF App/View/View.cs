@@ -117,11 +117,11 @@ namespace WPF_App.View
 
         public void UpdateBasicImprovementPic(int index, int level)
         {
-            if(level == 2)
+            if(level == 5)
             {
                 this.ImprovementsImages[index].Source = new BitmapImage(new Uri("Sources/"+ index + "1.png", UriKind.Relative));
             }
-            else if(level == 3)
+            else if(level == 10)
             {
                 this.ImprovementsImages[index].Source = new BitmapImage(new Uri("Sources/" + index + "2.png", UriKind.Relative));
             }
