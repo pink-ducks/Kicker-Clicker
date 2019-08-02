@@ -12,7 +12,7 @@ namespace WPF_App.Controller
         public void ClickButton()
         {
             this.AddPointsToUser(User.PointsPerClick);
-            View.SetLabelText(User.Points);
+            View.SetScoreLabelText(User.Points);
             View.ClickPointAddLabelAnimation();
             View.SetClickPointAddLabelText(User.PointsPerClick);
         }
@@ -22,9 +22,8 @@ namespace WPF_App.Controller
             if(BasicImprovements[index].checkPrice(User)) // check user's points
             {
                 this.ChargeUser(BasicImprovements[index].CurrentPrice);
-                View.SetLabelText(User.Points);
+                View.SetScoreLabelText(User.Points); //ScoreLabel.Content = user.Points;
 
-                //ScoreLabel.Content = user.Points;
                 this.IncreaseUserAdditionSpeed(BasicImprovements[index].SpeedOfAddingPoints);
                 this.UpgradeBasicImprovement(index);
                 View.SetButtonText(BasicImprovements[index].CurrentPrice, index);
@@ -39,7 +38,11 @@ namespace WPF_App.Controller
         {
             if (User.Points >= DoubleClicker.CurrentPrice)
             {
+                this.ChargeUser(DoubleClicker.CurrentPrice);
+                View.SetScoreLabelText(User.Points);
+
                 DoubleClicker.Upgrade();
+                this.User.PointsPerClick = this.User.PointsPerClick * 2;
                 View.SetButtonText(DoubleClicker.CurrentPrice, 6);
             }
         }

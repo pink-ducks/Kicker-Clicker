@@ -53,7 +53,7 @@ namespace WPF_App.Controller
         private void AddPointsPerSecond(object sender, EventArgs e)
         {
             User.Points += User.SpeedOfAddingPoints;
-            View.SetLabelText(User.Points);
+            View.SetScoreLabelText(User.Points);
         }
 
     }

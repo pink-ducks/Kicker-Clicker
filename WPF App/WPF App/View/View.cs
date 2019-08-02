@@ -84,7 +84,7 @@ namespace WPF_App.View
             buttons[index].Content = price;
         }
 
-        public void SetLabelText(double points)
+        public void SetScoreLabelText(double points)
         {
                 const int Digits = 1;
                 double pointsToDisplay = Math.Round(points, Digits);
