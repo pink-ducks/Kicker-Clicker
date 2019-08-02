@@ -108,26 +108,36 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Sources\01.png" />
-    <Resource Include="Sources\00.png" />
-    <Resource Include="Sources\02.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Sources\ball.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Sources\test.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Sources\10.png" />
-    <Resource Include="Sources\11.png" />
-    <Resource Include="Sources\12.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Sources\10_BYD_2.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Sources\click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Model\20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sources\00.png" />
+    <Resource Include="Sources\01.png" />
+    <Resource Include="Sources\02.png" />
+    <Resource Include="Sources\10.png" />
+    <Resource Include="Sources\11.png" />
+    <Resource Include="Sources\12.png" />
+    <Resource Include="Sources\20.png" />
+    <Resource Include="Sources\21.png" />
+    <Resource Include="Sources\22.png" />
+    <Resource Include="Sources\30.png" />
+    <Resource Include="Sources\31.png" />
+    <Resource Include="Sources\32.png" />
+    <Resource Include="Sources\40.png" />
+    <Resource Include="Sources\41.png" />
+    <Resource Include="Sources\42.png" />
+    <Resource Include="Sources\50.png" />
+    <Resource Include="Sources\51.png" />
+    <Resource Include="Sources\52.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
