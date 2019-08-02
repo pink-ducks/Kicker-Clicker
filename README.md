@@ -6,6 +6,6 @@
 
 
 ## Created by:
-#### Mateusz https://github.com/matpiwowarski
-#### Roman https://github.com/romanzemela
-#### Paulina https://github.com/paulinaurbas
+#### Mateusz - team leader https://github.com/matpiwowarski
+#### Roman - backend developer https://github.com/romanzemela
+#### Paulina - graphic designer https://github.com/paulinaurbas
