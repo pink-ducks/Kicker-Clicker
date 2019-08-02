@@ -1,5 +1,11 @@
 # Kicker-Clicker game
 
-### Screenshots: 
+## Screenshots: 
 
-![Open space](https://i.ibb.co/GMvKZ8C/clicker-screenshot.png)
+![Screen](https://github.com/matpiwowarski/Kicker-Clicker/blob/master/screen.PNG)
+
+
+## Created by:
+#### Mateusz https://github.com/matpiwowarski
+#### Roman https://github.com/romanzemela
+#### Paulina https://github.com/paulinaurbas
