@@ -9,6 +9,7 @@
         WindowState="Maximized" Background="#FF480855">
     <Viewbox StretchDirection="Both" Stretch="Uniform">
         <Grid Height="269.383" Width="835.113">
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="412*"/>
                 <ColumnDefinition Width="15*"/>
@@ -30,39 +31,45 @@
                     <ColumnDefinition Width="97*"/>
                 </Grid.ColumnDefinitions>
                 <Rectangle x:Name="improvement1Rectangle" Fill="White" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
-                <Button x:Name="Improvement1Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" Height="25" Click="Improvement1Button_Click" Grid.ColumnSpan="2" Background="#FFE7073F" Margin="0,100,0,0" FontFamily="Poppins"/>
+                <Button x:Name="Improvement1Button" Content="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" Height="25" Click="Improvement1Button_Click" Grid.ColumnSpan="2" Background="#FFE7073F" Margin="0,100,0,0" FontFamily="Poppins"/>
                 <Image x:Name="improvement1Image" Source="Sources/00.png"  HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" Margin="6.622,10,10,0" Grid.Column="1" OpacityMask="#FFEBEAEA"/>
             </Grid>
             <Grid x:Name="improvement2Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="192.723,73.46,0,0" >
                 <Rectangle x:Name="improvement2Rectangle" Fill="White" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
-                <Button x:Name="Improvement2Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement2Button_Click" Background="#FFE7073F" FontFamily="Poppins"/>
+                <Button x:Name="Improvement2Button" Content="100" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement2Button_Click" Background="#FFE7073F" FontFamily="Poppins"/>
                 <Image  x:Name="improvement2Image" Source="Sources/10.png" HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" Margin="10,10,10,0"/>
             </Grid>
             <Grid x:Name="improvement3Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="49.557,190.334,0,-45.951" >
                 <Rectangle x:Name="improvement3Rectangle" Fill="White" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
-                <Button x:Name="Improvement3Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement3Button_Click" Background="#FFE7073F" FontFamily="Poppins"/>
+                <Button x:Name="Improvement3Button" Content="1100" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement3Button_Click" Background="#FFE7073F" FontFamily="Poppins"/>
                 <Image  x:Name="improvement3Image" Source="Sources/20.png" HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" OpacityMask="#FFFDF8F8" Margin="10,10,10,0"/>
             </Grid>
             <Grid x:Name="improvement4Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="229.645,-52.646,0,0" Grid.Column="4" >
                 <Rectangle x:Name="improvement4Rectangle" Fill="White" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
-                <Button x:Name="Improvement4Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement4Button_Click" Background="#FFE7073F" FontFamily="Poppins"/>
+                <Button x:Name="Improvement4Button" Content="12000" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement4Button_Click" Background="#FFE7073F" FontFamily="Poppins"/>
                 <Image  x:Name="improvement4Image" Source="Sources/30.png" HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" Margin="10,10,10,0"/>
             </Grid>
             <Grid x:Name="improvement5Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="80.353,74.83,0,0" Grid.Column="4" >
                 <Rectangle x:Name="improvement5Rectangle" Fill="White" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
-                <Button x:Name="Improvement5Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement5Button_Click" Background="#FFE7073F" FontFamily="Poppins"/>
+                <Button x:Name="Improvement5Button" Content="130000" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement5Button_Click" Background="#FFE7073F" FontFamily="Poppins"/>
                 <Image  x:Name="improvement5Image" Source="Sources/40.png" HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" Margin="10,10,10,0"/>
             </Grid>
             <Grid x:Name="improvement6Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="229.646,188.224,0,-43.841" Grid.Column="4" >
                 <Rectangle x:Name="improvement6Rectangle" Fill="White" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
-                <Button x:Name="Improvement6Button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement6Button_Click" Background="#FFE7073F" FontFamily="Poppins"/>
+                <Button x:Name="Improvement6Button" Content="1400000" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement6Button_Click" Background="#FFE7073F" FontFamily="Poppins"/>
                 <Image  x:Name="improvement6Image" Source="Sources/50.png" HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" Margin="10,10,10,0"/>
             </Grid>
 
-            <Grid x:Name="BonusImprovement1Grid" HorizontalAlignment="Left" Height="80" Margin="281,277,0,-57.617" VerticalAlignment="Top" Width="60">
-                <Rectangle x:Name="BonusImprovement1Rectangle" Fill="White" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="60"/>
+            <Grid x:Name="BonusImprovement1Grid" HorizontalAlignment="Left" Height="80" Margin="312,273,0,-83.617" VerticalAlignment="Top" Width="60">
+                <Rectangle x:Name="BonusImprovement1Rectangle" Fill="White" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="60"/>
                 <Button x:Name="BonusImprovement1Button" Content="200" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60" Height="20" Click="BonusImprovement1Button_Click" Background="#FFE7073F" FontFamily="Poppins" Margin="0,0,0,30"/>
-                <Image x:Name="BonusImprovement1Image" HorizontalAlignment="Center" Height="25" Width="30" Source="Sources/click.png" VerticalAlignment="Top" Margin="0,2,0,0"/>
+                <Image x:Name="BonusImprovement1Image" HorizontalAlignment="Center" Height="30" Width="35" Source="Sources/click.png" VerticalAlignment="Top"/>
+            </Grid>
+
+            <Grid  x:Name="BonusImprovement2Grid" HorizontalAlignment="Left" Height="80" Margin="30,273,0,-83.617" VerticalAlignment="Top" Width="60" Grid.Column="4">
+                <Rectangle x:Name="BonusImprovement2Rectangle" Fill="White" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="60" Grid.RowSpan="2"/>
+                <Button x:Name="BonusImprovement2Button" Content="1000" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60" Height="20" Click="BonusImprovement1Button_Click" Background="#FFE7073F" FontFamily="Poppins" Margin="0,0,0,30" Grid.RowSpan="2"/>
+                <Image x:Name="BonusImprovement2Image" HorizontalAlignment="Center" Height="30" Width="35" Source="Sources/bonus.png" VerticalAlignment="Top" Margin="15,0"/>
             </Grid>
             <Label x:Name="Improvement1Label" Content="0"  Foreground="White" Margin="49.557,66.816,262.499,173.184" Width="100" HorizontalContentAlignment="Center" FontFamily="Poppins Black"/>
             <Label x:Name="Improvement2Label" Content="0"  Foreground="White" Margin="192.722,203.46,119.334,36.54" Width="100" HorizontalContentAlignment="Center" FontFamily="Segoe UI Black"/>
@@ -72,10 +79,13 @@
             <Label x:Name="Improvement6Label" Content="0"  Foreground="White" Margin="229.645,313.224,42.404,-73.224" Width="100" HorizontalContentAlignment="Center" Grid.Column="4" FontFamily="Poppins Black"/>
             <Label x:Name="SpeedOfAddingPointsLabel" Foreground="White" Content="+0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="67.666" Width="88.468" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Poppins Light" FontSize="20" RenderTransformOrigin="0.504,0" Margin="384.43,0,362.215,-25.868" Grid.ColumnSpan="5"/>
             <Label x:Name="ClickPointAddLabel" Content="+0" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="60" Width="600" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Poppins" FontSize="20" RenderTransformOrigin="0.504,0" Margin="0,0,113,97.383" Grid.ColumnSpan="5" Visibility="Hidden" MouseLeftButtonDown="ClickPointAddLabel_Click"/>
-            <Label x:Name="DoubleClickerLabel" Content="0"  Foreground="White" Margin="281,328,71,-87.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black"/>
+            <Label x:Name="DoubleClickerLabel" Content="0"  Foreground="White" Margin="312,324,40,-83.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black"/>
             <Label x:Name="GameName" Content="Kicker Clicker" HorizontalAlignment="Center" Margin="130,-87,50,0" VerticalAlignment="Top" Width="400" Grid.ColumnSpan="5" FontFamily="Poppins SemiBold" FontSize="48" Background="{x:Null}" Foreground="Snow" FontWeight="Bold"/>
+            <Label x:Name="DoublePointerLabel" Content="x1"  Foreground="White" Margin="45,324,267,-80.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black" Grid.Column="4"/>
+            <Label x:Name="SpeedLabel" Content="speed : "  Foreground="White" Margin="20,328,292,-86.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black" Grid.Column="4" FontSize="8"/>
 
         </Grid>
+
 
     </Viewbox>
 </Window>

@@ -17,8 +17,8 @@ namespace WPF_App.Model
 
         public override void Upgrade()
         {
-            NumberOfUpgrades++;
-            CurrentPrice = Convert.ToInt32(StartingPrice * 4 * NumberOfUpgrades);
+            this.NumberOfUpgrades++;
+            CurrentPrice = Convert.ToInt32(CurrentPrice * 4);
         }
     }
 }
