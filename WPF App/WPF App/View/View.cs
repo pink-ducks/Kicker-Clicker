@@ -17,6 +17,7 @@ namespace WPF_App.View
         private DispatcherTimer timer = new DispatcherTimer();
         List<Button> buttons = new List<Button>();
         List<Label> impovementsLevelsLabels = new List<Label>();
+        List<Label> infoLabels = new List<Label>();
         List<Image> improvementsImages = new List<Image>();
         Label label = new Label();
         Label speedOfAddingPointsLabel = new Label();
@@ -29,6 +30,7 @@ namespace WPF_App.View
         public User User { get => user; set => user = value; }
         public List<Button> Buttons { get => buttons; set => buttons = value; }
         public List<Label> ImpovementsLevelsLabels { get => impovementsLevelsLabels; set => impovementsLevelsLabels = value; }
+        public List<Label> InfoLabels { get => infoLabels; set => infoLabels = value; }
         public List<Image> ImprovementsImages { get => improvementsImages; set => improvementsImages = value; }
 
         // CONSTRUCTORS
@@ -56,6 +58,13 @@ namespace WPF_App.View
             for (int i = 0; i < images.Length; i++)
             {
                 ImprovementsImages.Add(images[i]);
+            }
+        }
+        public void AddInfoLabels(params Label[] labels)
+        {
+            for (int i = 0; i < labels.Length; i++)
+            {
+                InfoLabels.Add(labels[i]);
             }
         }
 

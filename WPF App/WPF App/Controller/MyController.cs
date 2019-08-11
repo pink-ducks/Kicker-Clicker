@@ -68,6 +68,20 @@ namespace WPF_App.Controller
             View.SetScoreLabelText(User.Points);
             
         }
-
+        public void UpdateInfoLabels()
+        {
+            double i1 = 0.1 * Math.Pow(2, DoublePointer.NumberOfUpgrades);
+            double i2 = 1 * Math.Pow(2, DoublePointer.NumberOfUpgrades);
+            double i3 = 8 * Math.Pow(2, DoublePointer.NumberOfUpgrades);
+            double i4 = 47 * Math.Pow(2, DoublePointer.NumberOfUpgrades);
+            double i5 = 260 * Math.Pow(2, DoublePointer.NumberOfUpgrades);
+            double i6 = 1400 * Math.Pow(2, DoublePointer.NumberOfUpgrades);
+            View.InfoLabels[0].Content = "+" + i1;
+            View.InfoLabels[1].Content = "+" + i2;
+            View.InfoLabels[2].Content = "+" + i3;
+            View.InfoLabels[3].Content = "+" + i4;
+            View.InfoLabels[4].Content = "+" + i5;
+            View.InfoLabels[5].Content = "+" + i6;
+        }
     }
 }

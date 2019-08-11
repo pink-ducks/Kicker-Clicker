@@ -84,12 +84,12 @@
             <Label x:Name="DoublePointerLabel" Content="0"  Foreground="White" Margin="30,324,282,-79.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black" Grid.Column="4" FontSize="10"/>
             <Label x:Name="BonusInfo2" Content="speed  x2"  Foreground="White" Margin="24,250,275,-3.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black" Grid.Column="4" FontSize="11"/>
             <Label x:Name="BonusInfo1" Content="click  x2"  Foreground="White" Margin="312,250,40,-3.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black" FontSize="11" RenderTransformOrigin="0.411,-0.783"/>
-            <Label x:Name="Info1" Content="+0.1"  Foreground="White" Margin="50,-87,262,327.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783"/>
-            <Label x:Name="Info2" Content="+1"  Foreground="White" Margin="193,45,119,197.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783"/>
-            <Label x:Name="Info1_Copy" Content="+8"  Foreground="White" Margin="50,162,262,79.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783"/>
-            <Label x:Name="Info1_Copy1" Content="+47"  Foreground="White" Margin="230,-81,42,322.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783" Grid.Column="4"/>
-            <Label x:Name="Info1_Copy2" Content="+260"  Foreground="White" Margin="80,47,192,194.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783" Grid.Column="4"/>
-            <Label x:Name="Info1_Copy3" Content="+1400&#xD;&#xA;+1400"  Foreground="White" Margin="230,160,42,81.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783" Grid.Column="4"/>
+            <Label x:Name="Info1Label" Content="+0.1"  Foreground="White" Margin="50,-87,262,327.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783"/>
+            <Label x:Name="Info2Label" Content="+1"  Foreground="White" Margin="193,45,119,197.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783"/>
+            <Label x:Name="Info3Label" Content="+8"  Foreground="White" Margin="50,162,262,79.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783"/>
+            <Label x:Name="Info4Label" Content="+47"  Foreground="White" Margin="230,-81,42,322.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783" Grid.Column="4"/>
+            <Label x:Name="Info5Label" Content="+260"  Foreground="White" Margin="80,47,192,194.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783" Grid.Column="4"/>
+            <Label x:Name="Info6Label" Content="+1400&#xD;&#xA;+1400"  Foreground="White" Margin="230,160,42,81.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783" Grid.Column="4"/>
 
         </Grid>
 

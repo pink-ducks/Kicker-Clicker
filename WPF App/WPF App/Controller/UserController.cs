@@ -56,6 +56,7 @@ namespace WPF_App.Controller
                 DoublePointer.Upgrade();
                 DoublePointer.CurrentPrice = Convert.ToInt32(DoublePointer.CurrentPrice * 10);
                 View.SetButtonText(DoublePointer.CurrentPrice, 7); // 7 -> DoublePointer index 
+                this.UpdateInfoLabels();
             }
         }
     }
