@@ -89,7 +89,7 @@
             <Label x:Name="Info3Label" Content="+8"  Foreground="White" Margin="50,162,262,79.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783"/>
             <Label x:Name="Info4Label" Content="+47"  Foreground="White" Margin="230,-81,42,322.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783" Grid.Column="4"/>
             <Label x:Name="Info5Label" Content="+260"  Foreground="White" Margin="80,47,192,194.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783" Grid.Column="4"/>
-            <Label x:Name="Info6Label" Content="+1400&#xD;&#xA;+1400"  Foreground="White" Margin="230,160,42,81.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783" Grid.Column="4"/>
+            <Label x:Name="Info6Label" Content="+1400"  Foreground="White" Margin="230,160,42,81.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783" Grid.Column="4" IsEnabled="False"/>
 
         </Grid>
 
