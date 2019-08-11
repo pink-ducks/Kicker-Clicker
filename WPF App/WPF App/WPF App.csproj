@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Sources\10_BYD_2.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -60,8 +63,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controller\MyController.cs" />
+    <Compile Include="Controller\UserController.cs" />
     <Compile Include="Model\BasicImprovement.cs" />
-    <Compile Include="Model\BonusImprovement.cs" />
+    <Compile Include="Model\DoubleClicker.cs" />
+    <Compile Include="ProgramData.cs" />
     <Compile Include="View\View.cs" />
     <Compile Include="Model\ConnSQL.cs" />
     <Compile Include="Model\Improvement.cs" />
@@ -103,15 +108,39 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Sources\01.png" />
-    <Resource Include="Sources\00.png" />
-    <Resource Include="Sources\02.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Sources\ball.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Sources\test.png" />
+    <Resource Include="Sources\10_BYD_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sources\click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Model\20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sources\00.png" />
+    <Resource Include="Sources\01.png" />
+    <Resource Include="Sources\02.png" />
+    <Resource Include="Sources\10.png" />
+    <Resource Include="Sources\11.png" />
+    <Resource Include="Sources\12.png" />
+    <Resource Include="Sources\20.png" />
+    <Resource Include="Sources\21.png" />
+    <Resource Include="Sources\22.png" />
+    <Resource Include="Sources\30.png" />
+    <Resource Include="Sources\31.png" />
+    <Resource Include="Sources\32.png" />
+    <Resource Include="Sources\40.png" />
+    <Resource Include="Sources\41.png" />
+    <Resource Include="Sources\42.png" />
+    <Resource Include="Sources\50.png" />
+    <Resource Include="Sources\51.png" />
+    <Resource Include="Sources\52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sources\bonus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

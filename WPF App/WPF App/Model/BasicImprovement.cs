@@ -30,5 +30,6 @@ namespace WPF_App.Model
             NumberOfUpgrades++;
             CurrentPrice = Convert.ToInt32(StartingPrice * Math.Pow(1.15, NumberOfUpgrades)); 
         }
+
     }
 }

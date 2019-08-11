@@ -19,141 +19,76 @@ namespace WPF_App
 {
     public partial class MainWindow : Window
     {
-        User user = new User(); // MODEL
-        BasicImprovement BI1 = new BasicImprovement(15, 0.1); // MODEL
-        BasicImprovement BI2 = new BasicImprovement(100, 1); // MODEL
-        BasicImprovement BI3 = new BasicImprovement(1100, 8); // MODEL
-        BasicImprovement BI4 = new BasicImprovement(12000, 47); // MODEL
-        BasicImprovement BI5 = new BasicImprovement(130000, 260); // MODEL
-        BasicImprovement BI6 = new BasicImprovement(1400000, 1400); // MODEL
+        ProgramData models = new ProgramData(); // ALL THE MODELS
         MyView view = new MyView(); // VIEW
-        MyController controller = new MyController(); // CONTROLLER
-
+        UserController controller = new UserController(); // CONTROLLER
         public MainWindow()
         {
             InitializeComponent();
-            // link
-            controller.LinkView(view);
-            // main click
-            view.AddLabel(ScoreLabel);
-            view.AddSpeedOfAddingPointsLabel(SpeedOfAddingPointsLabel);
-            // improvmenets
-            view.AddButtons(Improvement1Button, Improvement2Button, Improvement3Button, Improvement4Button, Improvement5Button, Improvement6Button);
-            view.AddImprovementsLevelsLabels(Improvement1Label, Improvement2Label, Improvement3Label, Improvement4Label, Improvement5Label, Improvement6Label);
-            view.AddImprovementImages(improvement1Image, improvement2Image, improvement3Image, improvement4Image, improvement5Image, improvement6Image);
-            view.SetButtonsTexts(BI1.StartingPrice, BI2.StartingPrice, BI3.StartingPrice, BI4.StartingPrice, BI5.StartingPrice, BI6.StartingPrice);
-
-            controller.AddBasicImprovements(BI1, BI2, BI3, BI4, BI5, BI6);
-
-            controller.AddUser(user);
-            //ConnSQL database = new ConnSQL();
-            //database.Connection();
-
+            models.SendData(controller, view);
+            SendViewData(view);
         }
         // Main Click Button
         private void ClickButton_Click(object sender, RoutedEventArgs e)
         {
-            controller.AddPointsToUser(1);
-            view.SetLabelText(user.Points);
+            controller.ClickButton();
+        }
+        private void ClickPointAddLabel_Click(object sender, RoutedEventArgs e)
+        {
+            controller.ClickButton();
         }
         // Improvements
         private void Improvement1Button_Click(object sender, RoutedEventArgs e)
         {
-            if(user.Points >= BI1.CurrentPrice)
-            {
-                controller.ChargeUser(BI1.CurrentPrice);
-                view.SetLabelText(user.Points);
-
-                //ScoreLabel.Content = user.Points;
-                controller.IncreaseUserAdditionSpeed(BI1.SpeedOfAddingPoints);
-                controller.UpgradeBasicImprovement(0);
-                view.SetButtonText(BI1.CurrentPrice, 0);
-                view.UpgradeLevelLabel(0);
-                view.SetSpeedOfAddingPointsLabelText(user.SpeedOfAddingPoints);
-                // update pic
-                view.UpdateBasicImprovementPic(0, BI1.NumberOfUpgrades);
-            }
+            controller.ClickBasicImprovement(0);
         }
 
         private void Improvement2Button_Click(object sender, RoutedEventArgs e)
         {
-            if (user.Points >= BI2.CurrentPrice)
-            {
-                controller.ChargeUser(BI2.CurrentPrice);
-                view.SetLabelText(user.Points);
-
-                //ScoreLabel.Content = user.Points;
-                controller.IncreaseUserAdditionSpeed(BI2.SpeedOfAddingPoints);
-                controller.UpgradeBasicImprovement(1);
-                view.SetButtonText(BI2.CurrentPrice, 1);
-                view.UpgradeLevelLabel(1);
-                view.SetSpeedOfAddingPointsLabelText(user.SpeedOfAddingPoints);
-            }
+            controller.ClickBasicImprovement(1);
         }
 
         private void Improvement3Button_Click(object sender, RoutedEventArgs e)
         {
-            if (user.Points >= BI3.CurrentPrice)
-            {
-                controller.ChargeUser(BI3.CurrentPrice);
-                view.SetLabelText(user.Points);
-
-                //ScoreLabel.Content = user.Points;
-                controller.IncreaseUserAdditionSpeed(BI3.SpeedOfAddingPoints);
-                controller.UpgradeBasicImprovement(2);
-                view.SetButtonText(BI3.CurrentPrice, 2);
-                view.UpgradeLevelLabel(2);
-                view.SetSpeedOfAddingPointsLabelText(user.SpeedOfAddingPoints);
-            }
+            controller.ClickBasicImprovement(2);
         }
 
         private void Improvement4Button_Click(object sender, RoutedEventArgs e)
         {
-            if (user.Points >= BI4.CurrentPrice)
-            {
-                controller.ChargeUser(BI4.CurrentPrice);
-                view.SetLabelText(user.Points);
-
-                //ScoreLabel.Content = user.Points;
-                controller.IncreaseUserAdditionSpeed(BI4.SpeedOfAddingPoints);
-                controller.UpgradeBasicImprovement(3);
-                view.SetButtonText(BI4.CurrentPrice, 3);
-                view.UpgradeLevelLabel(3);
-                view.SetSpeedOfAddingPointsLabelText(user.SpeedOfAddingPoints);
-            }
+        
+            controller.ClickBasicImprovement(3);
         }
 
         private void Improvement5Button_Click(object sender, RoutedEventArgs e)
         {
-            if (user.Points >= BI5.CurrentPrice)
-            {
-                controller.ChargeUser(BI5.CurrentPrice);
-                view.SetLabelText(user.Points);
-
-                //ScoreLabel.Content = user.Points;
-                controller.IncreaseUserAdditionSpeed(BI5.SpeedOfAddingPoints);
-                controller.UpgradeBasicImprovement(4);
-                view.SetButtonText(BI5.CurrentPrice, 4);
-                view.UpgradeLevelLabel(4);
-                view.SetSpeedOfAddingPointsLabelText(user.SpeedOfAddingPoints);
-            }
+            controller.ClickBasicImprovement(4);
         }
 
         private void Improvement6Button_Click(object sender, RoutedEventArgs e)
         {
-            if (user.Points >= BI6.CurrentPrice)
-            {
-                controller.ChargeUser(BI6.CurrentPrice);
-                view.SetLabelText(user.Points);
-
-                //ScoreLabel.Content = user.Points;
-                controller.IncreaseUserAdditionSpeed(BI6.SpeedOfAddingPoints);
-                controller.UpgradeBasicImprovement(5);
-                view.SetButtonText(BI6.CurrentPrice, 5);
-                view.UpgradeLevelLabel(5);
-                view.SetSpeedOfAddingPointsLabelText(user.SpeedOfAddingPoints);
-            }
-
+            controller.ClickBasicImprovement(5);
+        }
+        private void BonusImprovement1Button_Click(object sender, RoutedEventArgs e)
+        {
+            controller.ClickDoubleClicker();
+        }
+        private void SendViewData(MyView v)
+        {
+            v.AddLabel(ScoreLabel);
+            v.AddSpeedOfAddingPointsLabel(SpeedOfAddingPointsLabel);
+            v.AddClickPointAddLabel(ClickPointAddLabel);
+            // improvmenets
+            v.AddButtons(Improvement1Button, Improvement2Button, Improvement3Button, Improvement4Button, Improvement5Button, Improvement6Button);
+            v.AddImprovementsLevelsLabels(Improvement1Label, Improvement2Label, Improvement3Label, Improvement4Label, Improvement5Label, Improvement6Label, DoubleClickerLabel);
+            v.AddImprovementImages(improvement1Image, improvement2Image, improvement3Image, improvement4Image, improvement5Image, improvement6Image);
+            v.SetButtonsTexts(controller.BasicImprovements[0].StartingPrice,
+                controller.BasicImprovements[1].StartingPrice,
+                controller.BasicImprovements[2].StartingPrice,
+                controller.BasicImprovements[3].StartingPrice,
+                controller.BasicImprovements[4].StartingPrice,
+                controller.BasicImprovements[5].StartingPrice);
+            // double clicker
+            v.AddButtons(BonusImprovement1Button);
         }
     }
 }
