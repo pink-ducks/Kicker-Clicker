@@ -142,5 +142,10 @@
   <ItemGroup>
     <Resource Include="Sources\bonus.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sources\Sounds\SoccerKick_author%24volivieri%24.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

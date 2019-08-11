@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Media;
 using WPF_App.Model;
 
 namespace WPF_App.Controller
@@ -11,6 +12,7 @@ namespace WPF_App.Controller
     {
         public void ClickButton()
         {
+            new SoundPlayer(@"Sources\Sounds\SoccerKick_author$volivieri$.wav").Play();
             this.AddPointsToUser(User.PointsPerClick);
             View.SetScoreLabelText(User.Points);
             View.ClickPointAddLabelAnimation();
