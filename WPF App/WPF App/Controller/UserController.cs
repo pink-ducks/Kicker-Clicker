@@ -23,6 +23,7 @@ namespace WPF_App.Controller
         {
             if(BasicImprovements[index].checkPrice(User)) // check user's points
             {
+                new SoundPlayer(@"Sources\Sounds\SoccerFansCheering.wav").Play();
                 this.ChargeUser(BasicImprovements[index].CurrentPrice);
                 View.SetScoreLabelText(User.Points); //ScoreLabel.Content = user.Points;
 

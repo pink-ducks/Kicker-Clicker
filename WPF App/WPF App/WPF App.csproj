@@ -143,6 +143,9 @@
     <Resource Include="Sources\bonus.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Sources\Sounds\SoccerFansCheering.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Sources\Sounds\SoccerKick_author%24volivieri%24.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
