@@ -72,6 +72,10 @@ namespace WPF_App
         {
             controller.ClickDoubleClicker();
         }
+        private void BonusImprovement2Button_Click(object sender, RoutedEventArgs e)
+        {
+            controller.ClickDoublePointer();
+        }
         private void SendViewData(MyView v)
         {
             v.AddLabel(ScoreLabel);
@@ -79,7 +83,7 @@ namespace WPF_App
             v.AddClickPointAddLabel(ClickPointAddLabel);
             // improvmenets
             v.AddButtons(Improvement1Button, Improvement2Button, Improvement3Button, Improvement4Button, Improvement5Button, Improvement6Button);
-            v.AddImprovementsLevelsLabels(Improvement1Label, Improvement2Label, Improvement3Label, Improvement4Label, Improvement5Label, Improvement6Label, DoubleClickerLabel);
+            v.AddImprovementsLevelsLabels(Improvement1Label, Improvement2Label, Improvement3Label, Improvement4Label, Improvement5Label, Improvement6Label, DoubleClickerLabel, DoublePointerLabel);
             v.AddImprovementImages(improvement1Image, improvement2Image, improvement3Image, improvement4Image, improvement5Image, improvement6Image);
             v.SetButtonsTexts(controller.BasicImprovements[0].StartingPrice,
                 controller.BasicImprovements[1].StartingPrice,
@@ -87,8 +91,10 @@ namespace WPF_App
                 controller.BasicImprovements[3].StartingPrice,
                 controller.BasicImprovements[4].StartingPrice,
                 controller.BasicImprovements[5].StartingPrice);
-            // double clicker
+            // double clicker + double pointer
             v.AddButtons(BonusImprovement1Button);
+            v.AddButtons(BonusImprovement2Button);
         }
+
     }
 }

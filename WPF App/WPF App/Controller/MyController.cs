@@ -16,13 +16,15 @@ namespace WPF_App.Controller
         private User _user = new User();
         private List<BasicImprovement> _basicImprovements = new List<BasicImprovement>();
         private MyView _view = new MyView();
-        private DoubleClicker _doubleClicker = new DoubleClicker(200);
+        private BonusImprovement _doubleClicker = new BonusImprovement(200);
+        private BonusImprovement _doublePointer = new BonusImprovement(1000);
 
         public User User { get => _user; set => _user = value; }
         public MyView View { get => _view; set => _view = value; }
         public static DispatcherTimer Timer { get => _timer; set => _timer = value; }
         public List<BasicImprovement> BasicImprovements { get => _basicImprovements; set => _basicImprovements = value; }
-        public DoubleClicker DoubleClicker { get => _doubleClicker; set => _doubleClicker = value; }
+        public BonusImprovement DoubleClicker { get => _doubleClicker; set => _doubleClicker = value; }
+        public BonusImprovement DoublePointer { get => _doublePointer; set => _doublePointer = value; }
 
         // CONSTRUCTOR
         public MyController()
@@ -52,8 +54,19 @@ namespace WPF_App.Controller
         }
         private void AddPointsPerSecond(object sender, EventArgs e)
         {
-            User.Points += User.SpeedOfAddingPoints;
+            if(DoublePointer.NumberOfUpgrades >= 1)
+            {
+                double speed = User.SpeedOfAddingPoints * Math.Pow(2, DoublePointer.NumberOfUpgrades);
+                User.Points += speed;
+                View.SetSpeedOfAddingPointsLabelText(speed);
+            }
+            else
+            {
+                User.Points += User.SpeedOfAddingPoints;
+                View.SetSpeedOfAddingPointsLabelText(User.SpeedOfAddingPoints);
+            }
             View.SetScoreLabelText(User.Points);
+            
         }
 
     }

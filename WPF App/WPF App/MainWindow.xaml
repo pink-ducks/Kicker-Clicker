@@ -68,7 +68,7 @@
 
             <Grid  x:Name="BonusImprovement2Grid" HorizontalAlignment="Left" Height="80" Margin="30,273,0,-83.617" VerticalAlignment="Top" Width="60" Grid.Column="4">
                 <Rectangle x:Name="BonusImprovement2Rectangle" Fill="White" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="60" Grid.RowSpan="2"/>
-                <Button x:Name="BonusImprovement2Button" Content="1000" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60" Height="20" Click="BonusImprovement1Button_Click" Background="#FFE7073F" FontFamily="Poppins" Margin="0,0,0,30" Grid.RowSpan="2"/>
+                <Button x:Name="BonusImprovement2Button" Content="1000" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60" Height="20" Click="BonusImprovement2Button_Click" Background="#FFE7073F" FontFamily="Poppins" Margin="0,0,0,30" Grid.RowSpan="2"/>
                 <Image x:Name="BonusImprovement2Image" HorizontalAlignment="Center" Height="30" Width="35" Source="Sources/bonus.png" VerticalAlignment="Top" Margin="15,0"/>
             </Grid>
             <Label x:Name="Improvement1Label" Content="0"  Foreground="White" Margin="49.557,66.816,262.499,173.184" Width="100" HorizontalContentAlignment="Center" FontFamily="Poppins Black"/>
@@ -81,8 +81,7 @@
             <Label x:Name="ClickPointAddLabel" Content="+0" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="60" Width="600" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Poppins" FontSize="20" RenderTransformOrigin="0.504,0" Margin="0,0,113,97.383" Grid.ColumnSpan="5" Visibility="Hidden" MouseLeftButtonDown="ClickPointAddLabel_Click"/>
             <Label x:Name="DoubleClickerLabel" Content="0"  Foreground="White" Margin="312,324,40,-83.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black"/>
             <Label x:Name="GameName" Content="Kicker Clicker" HorizontalAlignment="Center" Margin="130,-87,50,0" VerticalAlignment="Top" Width="400" Grid.ColumnSpan="5" FontFamily="Poppins SemiBold" FontSize="48" Background="{x:Null}" Foreground="Snow" FontWeight="Bold"/>
-            <Label x:Name="DoublePointerLabel" Content="x1"  Foreground="White" Margin="45,324,267,-80.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black" Grid.Column="4"/>
-            <Label x:Name="SpeedLabel" Content="speed : "  Foreground="White" Margin="20,328,292,-86.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black" Grid.Column="4" FontSize="8"/>
+            <Label x:Name="DoublePointerLabel" Content="0"  Foreground="White" Margin="30,324,282,-79.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black" Grid.Column="4"/>
 
         </Grid>
 
