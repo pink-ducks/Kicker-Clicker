@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WPF_App.Model
 {
-    public class DoubleClicker: Improvement
+    public class BonusImprovement: Improvement
     {
-        public DoubleClicker(int startingPrice)
+        public BonusImprovement(int startingPrice)
         {
             NumberOfUpgrades = 0;
             StartingPrice = startingPrice;
@@ -18,7 +18,6 @@ namespace WPF_App.Model
         public override void Upgrade()
         {
             this.NumberOfUpgrades++;
-            CurrentPrice = Convert.ToInt32(CurrentPrice * 4);
         }
     }
 }
