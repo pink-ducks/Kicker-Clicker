@@ -24,6 +24,7 @@ namespace WPF_App.Controller
         {
             if(BasicImprovements[index].checkPrice(User)) // check user's points
             {
+                new SoundPlayer(@"Sources\Sounds\SoccerFansCheering.wav").Play();
                 this.ChargeUser(BasicImprovements[index].CurrentPrice);
                 View.SetScoreLabelText(User.Points); //ScoreLabel.Content = user.Points;
 
@@ -40,6 +41,7 @@ namespace WPF_App.Controller
         {
             if (User.Points >= DoubleClicker.CurrentPrice)
             {
+                new SoundPlayer(@"Sources\Sounds\SoccerFansCheering.wav").Play();
                 this.ChargeUser(DoubleClicker.CurrentPrice);
                 View.SetScoreLabelText(User.Points);
                 View.UpgradeLevelLabel(6); // 6 -> DoubleClicker index 
@@ -53,6 +55,7 @@ namespace WPF_App.Controller
         {
             if (User.Points >= DoublePointer.CurrentPrice)
             {
+                new SoundPlayer(@"Sources\Sounds\SoccerFansCheering.wav").Play();
                 this.ChargeUser(DoublePointer.CurrentPrice);
                 View.SetScoreLabelText(User.Points);
                 View.UpgradeLevelLabel(7); // 7 -> DoublePointer index 
