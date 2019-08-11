@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Media;
 using WPF_App.Model;
 
@@ -10,10 +9,11 @@ namespace WPF_App.Controller
 {
     class UserController: MyController
     {
-        private SoundPlayer soundPlayer = new SoundPlayer(@"Sources\Sounds\SoccerKick_author$volivieri$.wav");
+        private SoundPlayer clickSound = new SoundPlayer(@"Sources\Sounds\SoccerKick_author$volivieri$.wav");
+        private SoundPlayer upgradeSound = new SoundPlayer(@"Sources\Sounds\SoccerFansCheering.wav");
         public void ClickButton()
         {
-            this.soundPlayer.Play();
+            this.clickSound.Play();
             this.AddPointsToUser(User.PointsPerClick);
             View.SetScoreLabelText(User.Points);
             View.ClickPointAddLabelAnimation();
@@ -24,7 +24,7 @@ namespace WPF_App.Controller
         {
             if(BasicImprovements[index].checkPrice(User)) // check user's points
             {
-                new SoundPlayer(@"Sources\Sounds\SoccerFansCheering.wav").Play();
+                upgradeSound.Play();
                 this.ChargeUser(BasicImprovements[index].CurrentPrice);
                 View.SetScoreLabelText(User.Points); //ScoreLabel.Content = user.Points;
 
