@@ -23,7 +23,7 @@
                         <Image Source="Sources/ball.png" />
                     </ControlTemplate>
                 </Button.Template>
-            </Button>
+             </Button>
             <Label x:Name="ScoreLabel"  Foreground="White" Content="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="68.863" Width="450.692" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Poppins" FontSize="36" RenderTransformOrigin="0.504,0" Margin="203.389,0,181.032,199.88" Grid.ColumnSpan="5"/>
             <Grid x:Name="improvement1Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="49.557,-58.184,0,0" Background="White">
                 <Grid.ColumnDefinitions>
