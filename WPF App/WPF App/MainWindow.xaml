@@ -71,17 +71,25 @@
                 <Button x:Name="BonusImprovement2Button" Content="1000" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60" Height="20" Click="BonusImprovement2Button_Click" Background="#FFE7073F" FontFamily="Poppins" Margin="0,0,0,30" Grid.RowSpan="2"/>
                 <Image x:Name="BonusImprovement2Image" HorizontalAlignment="Center" Height="30" Width="35" Source="Sources/bonus.png" VerticalAlignment="Top" Margin="15,0"/>
             </Grid>
-            <Label x:Name="Improvement1Label" Content="0"  Foreground="White" Margin="49.557,66.816,262.499,173.184" Width="100" HorizontalContentAlignment="Center" FontFamily="Poppins Black"/>
-            <Label x:Name="Improvement2Label" Content="0"  Foreground="White" Margin="192.722,203.46,119.334,36.54" Width="100" HorizontalContentAlignment="Center" FontFamily="Segoe UI Black"/>
-            <Label x:Name="Improvement3Label" Content="0"  Foreground="White" Margin="49.557,320.334,262.499,-80.334" Width="100" HorizontalContentAlignment="Center" FontFamily="Poppins Black"/>
-            <Label x:Name="Improvement4Label" Content="0"  Foreground="White" Margin="229.645,71.816,42.404,168.184" Width="100" HorizontalContentAlignment="Center" Grid.Column="4" FontFamily="Poppins Black"/>
-            <Label x:Name="Improvement5Label" Content="0"  Foreground="White" Margin="80.352,203.46,191.697,36.54" Width="100" HorizontalContentAlignment="Center" Grid.Column="4" FontFamily="Poppins Black"/>
-            <Label x:Name="Improvement6Label" Content="0"  Foreground="White" Margin="229.645,313.224,42.404,-73.224" Width="100" HorizontalContentAlignment="Center" Grid.Column="4" FontFamily="Poppins Black"/>
+            <Label x:Name="Improvement1Label" Content="0"  Foreground="White" Margin="49.557,66.816,262.499,173.184" Width="100" HorizontalContentAlignment="Center" FontFamily="Poppins Black" FontSize="10"/>
+            <Label x:Name="Improvement2Label" Content="0"  Foreground="White" Margin="193,198,119,42.383" Width="100" HorizontalContentAlignment="Center" FontFamily="Segoe UI Black" FontSize="10"/>
+            <Label x:Name="Improvement3Label" Content="0"  Foreground="White" Margin="50,315,262,-74.617" Width="100" HorizontalContentAlignment="Center" FontFamily="Poppins Black" FontSize="10"/>
+            <Label x:Name="Improvement4Label" Content="0"  Foreground="White" Margin="229.645,71.816,42.404,168.184" Width="100" HorizontalContentAlignment="Center" Grid.Column="4" FontFamily="Poppins Black" FontSize="10"/>
+            <Label x:Name="Improvement5Label" Content="0"  Foreground="White" Margin="80,200,192,40.383" Width="100" HorizontalContentAlignment="Center" Grid.Column="4" FontFamily="Poppins Black" FontSize="10"/>
+            <Label x:Name="Improvement6Label" Content="0"  Foreground="White" Margin="230,313,42,-72.617" Width="100" HorizontalContentAlignment="Center" Grid.Column="4" FontFamily="Poppins Black" FontSize="10"/>
             <Label x:Name="SpeedOfAddingPointsLabel" Foreground="White" Content="+0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="67.666" Width="88.468" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Poppins Light" FontSize="20" RenderTransformOrigin="0.504,0" Margin="384.43,0,362.215,-25.868" Grid.ColumnSpan="5"/>
             <Label x:Name="ClickPointAddLabel" Content="+0" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="60" Width="600" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Poppins" FontSize="20" RenderTransformOrigin="0.504,0" Margin="0,0,113,97.383" Grid.ColumnSpan="5" Visibility="Hidden" MouseLeftButtonDown="ClickPointAddLabel_Click"/>
-            <Label x:Name="DoubleClickerLabel" Content="0"  Foreground="White" Margin="312,324,40,-83.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black"/>
+            <Label x:Name="DoubleClickerLabel" Content="0"  Foreground="White" Margin="312,324,40,-83.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black" FontSize="10"/>
             <Label x:Name="GameName" Content="Kicker Clicker" HorizontalAlignment="Center" Margin="130,-87,50,0" VerticalAlignment="Top" Width="400" Grid.ColumnSpan="5" FontFamily="Poppins SemiBold" FontSize="48" Background="{x:Null}" Foreground="Snow" FontWeight="Bold"/>
-            <Label x:Name="DoublePointerLabel" Content="0"  Foreground="White" Margin="30,324,282,-79.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black" Grid.Column="4"/>
+            <Label x:Name="DoublePointerLabel" Content="0"  Foreground="White" Margin="30,324,282,-79.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black" Grid.Column="4" FontSize="10"/>
+            <Label x:Name="BonusInfo2" Content="speed  x2"  Foreground="White" Margin="24,250,275,-3.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black" Grid.Column="4" FontSize="11"/>
+            <Label x:Name="BonusInfo1" Content="click  x2"  Foreground="White" Margin="312,250,40,-3.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black" FontSize="11" RenderTransformOrigin="0.411,-0.783"/>
+            <Label x:Name="Info1" Content="+0.1"  Foreground="White" Margin="50,-87,262,327.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783"/>
+            <Label x:Name="Info2" Content="+1"  Foreground="White" Margin="193,45,119,197.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783"/>
+            <Label x:Name="Info1_Copy" Content="+8"  Foreground="White" Margin="50,162,262,79.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783"/>
+            <Label x:Name="Info1_Copy1" Content="+47"  Foreground="White" Margin="230,-81,42,322.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783" Grid.Column="4"/>
+            <Label x:Name="Info1_Copy2" Content="+260"  Foreground="White" Margin="80,47,192,194.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783" Grid.Column="4"/>
+            <Label x:Name="Info1_Copy3" Content="+1400&#xD;&#xA;+1400"  Foreground="White" Margin="230,160,42,81.383" HorizontalContentAlignment="Center" FontFamily="Poppins Black" RenderTransformOrigin="0.411,-0.783" Grid.Column="4"/>
 
         </Grid>
 
