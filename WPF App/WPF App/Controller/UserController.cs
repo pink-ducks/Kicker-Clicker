@@ -10,9 +10,10 @@ namespace WPF_App.Controller
 {
     class UserController: MyController
     {
+        private SoundPlayer soundPlayer = new SoundPlayer(@"Sources\Sounds\SoccerKick_author$volivieri$.wav");
         public void ClickButton()
         {
-            new SoundPlayer(@"Sources\Sounds\SoccerKick_author$volivieri$.wav").Play();
+            this.soundPlayer.Play();
             this.AddPointsToUser(User.PointsPerClick);
             View.SetScoreLabelText(User.Points);
             View.ClickPointAddLabelAnimation();
