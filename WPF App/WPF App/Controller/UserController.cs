@@ -40,6 +40,7 @@ namespace WPF_App.Controller
         {
             if (User.Points >= DoubleClicker.CurrentPrice)
             {
+                new SoundPlayer(@"Sources\Sounds\SoccerFansCheering.wav").Play();
                 this.ChargeUser(DoubleClicker.CurrentPrice);
                 View.SetScoreLabelText(User.Points);
                 View.UpgradeLevelLabel(6); // 6 -> DoubleClicker index 
@@ -53,6 +54,7 @@ namespace WPF_App.Controller
         {
             if (User.Points >= DoublePointer.CurrentPrice)
             {
+                new SoundPlayer(@"Sources\Sounds\SoccerFansCheering.wav").Play();
                 this.ChargeUser(DoublePointer.CurrentPrice);
                 View.SetScoreLabelText(User.Points);
                 View.UpgradeLevelLabel(7); // 7 -> DoublePointer index 
