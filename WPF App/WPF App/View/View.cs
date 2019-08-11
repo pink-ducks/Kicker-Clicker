@@ -39,6 +39,63 @@ namespace WPF_App.View
 
         }
         // METHODS
+        public String ShortNumbersMaker(double number)
+        {
+            const int Digits = 1;
+            if (number < 1000d)
+            {
+                return number.ToString();
+            }
+            else if (number < 1000000d)
+            {
+                number /= 1000d;
+                number = Math.Round(number, Digits);
+                return number.ToString() + "k";
+            }
+            else if (number < 1000000000d)
+            {
+                
+                number /= 1000000d;
+                number = Math.Round(number, Digits);
+                return number.ToString() + "M";
+            }
+            else if (number < 1000000000000d)
+            {
+                number /= 1000000000d;
+                number = Math.Round(number, Digits);
+                return number.ToString() + "G";
+            }
+            else if (number < 1000000000000000d)
+            {
+                number /= 1000000000000d;
+                number = Math.Round(number, Digits);
+                return number.ToString() + "T";
+            }
+            else if (number < 1000000000000000000d)
+            {
+                number /= 1000000000000000d;
+                number = Math.Round(number, Digits);
+                return number.ToString() + "P";
+            }
+            else if (number < 1000000000000000000000d)
+            {
+                number /= 1000000000000000000d;
+                number = Math.Round(number, Digits);
+                return number.ToString() + "E";
+            }
+            else if (number < 1000000000000000000000000d)
+            {
+                number /= 1000000000000000000000d;
+                number = Math.Round(number, Digits);
+                return number.ToString() + "Z";
+            }
+            else
+            {
+                number /= 1000000000000000000000000d;
+                number = Math.Round(number, Digits);
+                return number.ToString() + "Y";
+            }
+        }
         public void AddButtons(params Button[] buttons)
         {
             for (int i = 0; i < buttons.Length; i++)
@@ -84,32 +141,34 @@ namespace WPF_App.View
         {
             for (int i = 0; i < buttons.Count; i++)
             {
-                Buttons[i].Content = prices[i];
+                Buttons[i].Content = ShortNumbersMaker(prices[i]);
             }
         }
 
         public void SetButtonText(int price, int index)
         {
-            buttons[index].Content = price;
+            
+            buttons[index].Content = ShortNumbersMaker(price);
         }
 
         public void SetScoreLabelText(double points)
         {
+            
                 const int Digits = 1;
                 double pointsToDisplay = Math.Round(points, Digits);
-                label.Content = pointsToDisplay;
+                label.Content = ShortNumbersMaker(pointsToDisplay);
         }
         public void SetSpeedOfAddingPointsLabelText(double speedOfAddingPoints)
         {
                 const int Digits = 1;
                 double pointsAddingSPeedToDisplay = Math.Round(speedOfAddingPoints, Digits);
-                speedOfAddingPointsLabel.Content = "+" + pointsAddingSPeedToDisplay;
+                speedOfAddingPointsLabel.Content = "+" + ShortNumbersMaker(pointsAddingSPeedToDisplay);
         }
         public void SetClickPointAddLabelText(double pointsPerClick)
         {
             const int Digits = 1;
-            double pointsPerClickToDisplay = Math.Round(pointsPerClick, Digits);
-            clickPointAddLabel.Content = "+" + pointsPerClickToDisplay;
+            double pointsPerClickToDisplay = Math.Round(pointsPerClick, Digits);      
+            clickPointAddLabel.Content = "+" + ShortNumbersMaker(pointsPerClickToDisplay);
         }
         public void ClickPointAddLabelAnimation()
         {
