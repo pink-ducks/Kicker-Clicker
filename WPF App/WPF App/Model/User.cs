@@ -9,7 +9,7 @@ namespace WPF_App.Model
     public class User
     {
         private static double _points;
-        private static double _pointsPerClick = 10000;
+        private static double _pointsPerClick = 1;
         private static double _speedOfAddingPoints;
 
         public double Points { get => _points; set => _points = value; }
