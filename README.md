@@ -2,6 +2,8 @@
 
 ## Game description on the screen below:
 
+![Screen](https://raw.githubusercontent.com/matpiwowarski/Kicker-Clicker/master/screen.PNG)
+
 ### Scales of numbers 
 
 #### 1k = 1 000
