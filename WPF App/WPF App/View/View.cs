@@ -145,7 +145,7 @@ namespace WPF_App.View
             }
         }
 
-        public void SetButtonText(int price, int index)
+        public void SetButtonText(double price, int index)
         {
             
             buttons[index].Content = ShortNumbersMaker(price);

@@ -28,7 +28,9 @@ namespace WPF_App.Model
         public override void Upgrade()
         {
             NumberOfUpgrades++;
-            CurrentPrice = Convert.ToInt32(StartingPrice * Math.Pow(1.15, NumberOfUpgrades)); 
+            const int Digits = 1;
+            
+            CurrentPrice = Math.Round(StartingPrice * Math.Pow(1.15, NumberOfUpgrades), Digits);
         }
 
     }

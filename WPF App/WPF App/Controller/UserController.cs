@@ -46,7 +46,8 @@ namespace WPF_App.Controller
                 View.SetScoreLabelText(User.Points);
                 View.UpgradeLevelLabel(6); // 6 -> DoubleClicker index 
                 DoubleClicker.Upgrade();
-                DoubleClicker.CurrentPrice = Convert.ToInt32(DoubleClicker.CurrentPrice * 4);
+                const int Digits = 1;
+                DoubleClicker.CurrentPrice = Math.Round(DoubleClicker.CurrentPrice * 2, Digits);
                 this.User.PointsPerClick = this.User.PointsPerClick * 2;
                 View.SetButtonText(DoubleClicker.CurrentPrice, 6); // 6 -> DoubleClicker index 
             }
@@ -60,7 +61,8 @@ namespace WPF_App.Controller
                 View.SetScoreLabelText(User.Points);
                 View.UpgradeLevelLabel(7); // 7 -> DoublePointer index 
                 DoublePointer.Upgrade();
-                DoublePointer.CurrentPrice = Convert.ToInt32(DoublePointer.CurrentPrice * 10);
+                const int Digits = 1;       
+                DoublePointer.CurrentPrice = Math.Round(DoublePointer.CurrentPrice * 100, Digits);
                 View.SetButtonText(DoublePointer.CurrentPrice, 7); // 7 -> DoublePointer index 
                 this.UpdateInfoLabels();
             }
