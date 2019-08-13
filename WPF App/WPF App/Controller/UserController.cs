@@ -19,7 +19,6 @@ namespace WPF_App.Controller
             View.ClickPointAddLabelAnimation();
             View.SetClickPointAddLabelText(User.PointsPerClick);
         }
-
         public void ClickBasicImprovement(int index)
         {
             if(BasicImprovements[index].checkPrice(User)) // check user's points
@@ -36,7 +35,6 @@ namespace WPF_App.Controller
                 View.UpdateBasicImprovementPic(index, BasicImprovements[index].NumberOfUpgrades);
             }
         }
-
         public void ClickDoubleClicker()
         {
             if (User.Points >= DoubleClicker.CurrentPrice)
