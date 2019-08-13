@@ -18,6 +18,7 @@ namespace WPF_App
         private int basicImprovement6Level = 0;
         private int bonusImprovement1Level = 0;
         private int bonusImprovement2Level = 0;
+        private string dataToSave;
 
         public void sendBasicData(double score, double pointsPerSecond)
         {
@@ -36,20 +37,24 @@ namespace WPF_App
             this.bonusImprovement1Level = bonuslvl1;
             this.bonusImprovement2Level = bonuslvl2;
         }
+        private void hashData()
+        {
+            dataToSave = score + " "
+            + pointsPerSecond + " "
+            + basicImprovement1Level + " "
+            + basicImprovement2Level + " "
+            + basicImprovement3Level + " "
+            + basicImprovement4Level + " "
+            + basicImprovement5Level + " "
+            + basicImprovement6Level + " "
+            + bonusImprovement1Level + " "
+            + bonusImprovement2Level;
+            dataToSave = dataToSave.GetHashCode().ToString();
+        }
         public void SaveData(string path) // save.txt
         {
-            string data = score + " "
-                + pointsPerSecond + " "
-                + basicImprovement1Level + " "
-                + basicImprovement2Level + " "
-                + basicImprovement3Level + " "
-                + basicImprovement4Level + " "
-                + basicImprovement5Level + " "
-                + basicImprovement6Level + " "
-                + bonusImprovement1Level + " "
-                + bonusImprovement2Level + " ";
-
-            System.IO.File.WriteAllText(path, data);
+            hashData();
+            System.IO.File.WriteAllText(path, dataToSave);
         }
     }
 }
