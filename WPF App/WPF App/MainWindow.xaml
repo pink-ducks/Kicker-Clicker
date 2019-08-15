@@ -20,12 +20,19 @@
             <Button x:Name="BallButton" Click="ClickButton_Click" SnapsToDevicePixels="True" VerticalAlignment="Top" Height="197.261" Margin="344.101,46.074,322.105,0" Grid.ColumnSpan="5" >
                 <Button.Template>
                     <ControlTemplate>
-                        <Image Source="Sources/ball.png" />
+                        <Image Source="Sources/ball.png" Opacity="1" >
+                            <Image.Effect>
+                                <DropShadowEffect Opacity="0.3"/>
+                            </Image.Effect>
+                        </Image>
                     </ControlTemplate>
                 </Button.Template>
              </Button>
             <Label x:Name="ScoreLabel"  Foreground="White" Content="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="68.863" Width="450.692" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Poppins" FontSize="36" RenderTransformOrigin="0.504,0" Margin="203.389,0,181.032,199.88" Grid.ColumnSpan="5"/>
             <Grid x:Name="improvement1Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="49.557,-58.184,0,0" Background="White">
+                <Grid.Effect>
+                    <DropShadowEffect Opacity="0.3"/>
+                </Grid.Effect>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="97*"/>
@@ -35,38 +42,59 @@
                 <Image x:Name="improvement1Image" Source="Sources/00.png"  HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" Margin="6.622,10,10,0" Grid.Column="1" OpacityMask="#FFEBEAEA"/>
             </Grid>
             <Grid x:Name="improvement2Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="192.723,73.46,0,0" >
+                <Grid.Effect>
+                    <DropShadowEffect Opacity="0.3"/>
+                </Grid.Effect>
                 <Rectangle x:Name="improvement2Rectangle" Fill="White" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
                 <Button x:Name="Improvement2Button" Content="100" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement2Button_Click" Background="#FFE7073F" FontFamily="Poppins"/>
                 <Image  x:Name="improvement2Image" Source="Sources/10.png" HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" Margin="10,10,10,0"/>
             </Grid>
             <Grid x:Name="improvement3Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="49.557,190.334,0,-45.951" >
+                <Grid.Effect>
+                    <DropShadowEffect Opacity="0.3"/>
+                </Grid.Effect>
                 <Rectangle x:Name="improvement3Rectangle" Fill="White" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
                 <Button x:Name="Improvement3Button" Content="1100" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement3Button_Click" Background="#FFE7073F" FontFamily="Poppins"/>
                 <Image  x:Name="improvement3Image" Source="Sources/20.png" HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" OpacityMask="#FFFDF8F8" Margin="10,10,10,0"/>
             </Grid>
             <Grid x:Name="improvement4Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="229.645,-52.646,0,0" Grid.Column="4" >
+                <Grid.Effect>
+                    <DropShadowEffect Opacity="0.3"/>
+                </Grid.Effect>
                 <Rectangle x:Name="improvement4Rectangle" Fill="White" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
                 <Button x:Name="Improvement4Button" Content="12000" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement4Button_Click" Background="#FFE7073F" FontFamily="Poppins"/>
                 <Image  x:Name="improvement4Image" Source="Sources/30.png" HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" Margin="10,10,10,0"/>
             </Grid>
             <Grid x:Name="improvement5Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="80.353,74.83,0,0" Grid.Column="4" >
+                <Grid.Effect>
+                    <DropShadowEffect Opacity="0.3"/>
+                </Grid.Effect>
                 <Rectangle x:Name="improvement5Rectangle" Fill="White" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
                 <Button x:Name="Improvement5Button" Content="130000" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement5Button_Click" Background="#FFE7073F" FontFamily="Poppins"/>
                 <Image  x:Name="improvement5Image" Source="Sources/40.png" HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" Margin="10,10,10,0"/>
             </Grid>
             <Grid x:Name="improvement6Grid" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100" Margin="229.646,188.224,0,-43.841" Grid.Column="4" >
+                <Grid.Effect>
+                    <DropShadowEffect Opacity="0.3"/>
+                </Grid.Effect>
                 <Rectangle x:Name="improvement6Rectangle" Fill="White" HorizontalAlignment="Left" Height="125" VerticalAlignment="Top" Width="100"/>
                 <Button x:Name="Improvement6Button" Content="1400000" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="25" Click="Improvement6Button_Click" Background="#FFE7073F" FontFamily="Poppins"/>
                 <Image  x:Name="improvement6Image" Source="Sources/50.png" HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" Margin="10,10,10,0"/>
             </Grid>
 
             <Grid x:Name="BonusImprovement1Grid" HorizontalAlignment="Left" Height="80" Margin="312,273,0,-83.617" VerticalAlignment="Top" Width="60">
+                <Grid.Effect>
+                    <DropShadowEffect Opacity="0.3"/>
+                </Grid.Effect>
                 <Rectangle x:Name="BonusImprovement1Rectangle" Fill="White" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="60"/>
                 <Button x:Name="BonusImprovement1Button" Content="200" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60" Height="20" Click="BonusImprovement1Button_Click" Background="#FFE7073F" FontFamily="Poppins" Margin="0,0,0,30"/>
                 <Image x:Name="BonusImprovement1Image" HorizontalAlignment="Center" Height="30" Width="35" Source="Sources/click.png" VerticalAlignment="Top"/>
             </Grid>
 
             <Grid  x:Name="BonusImprovement2Grid" HorizontalAlignment="Left" Height="80" Margin="30,273,0,-83.617" VerticalAlignment="Top" Width="60" Grid.Column="4">
+                <Grid.Effect>
+                    <DropShadowEffect Opacity="0.3"/>
+                </Grid.Effect>
                 <Rectangle x:Name="BonusImprovement2Rectangle" Fill="White" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="60" Grid.RowSpan="2"/>
                 <Button x:Name="BonusImprovement2Button" Content="1000" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60" Height="20" Click="BonusImprovement2Button_Click" Background="#FFE7073F" FontFamily="Poppins" Margin="0,0,0,30" Grid.RowSpan="2"/>
                 <Image x:Name="BonusImprovement2Image" HorizontalAlignment="Center" Height="30" Width="35" Source="Sources/bonus.png" VerticalAlignment="Top" Margin="15,0"/>
@@ -78,9 +106,17 @@
             <Label x:Name="Improvement5Label" Content="0"  Foreground="White" Margin="80,200,192,40.383" Width="100" HorizontalContentAlignment="Center" Grid.Column="4" FontFamily="Poppins Black" FontSize="10"/>
             <Label x:Name="Improvement6Label" Content="0"  Foreground="White" Margin="230,313,42,-72.617" Width="100" HorizontalContentAlignment="Center" Grid.Column="4" FontFamily="Poppins Black" FontSize="10"/>
             <Label x:Name="SpeedOfAddingPointsLabel" Foreground="White" Content="+0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="67.666" Width="88.468" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Poppins Light" FontSize="20" RenderTransformOrigin="0.504,0" Margin="384.43,0,362.215,-25.868" Grid.ColumnSpan="5"/>
-            <Label x:Name="ClickPointAddLabel" Content="+0" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="60" Width="600" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Poppins" FontSize="20" RenderTransformOrigin="0.504,0" Margin="0,0,113,97.383" Grid.ColumnSpan="5" Visibility="Hidden" MouseLeftButtonDown="ClickPointAddLabel_Click"/>
+            <Label x:Name="ClickPointAddLabel" Content="+0" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="600" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Poppins" FontSize="20" RenderTransformOrigin="0.504,0" Margin="0,0,100,100" Grid.ColumnSpan="5" Visibility="Hidden" MouseLeftButtonDown="ClickPointAddLabel_Click">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
             <Label x:Name="DoubleClickerLabel" Content="0"  Foreground="White" Margin="312,324,40,-83.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black" FontSize="10"/>
-            <Label x:Name="GameName" Content="Kicker Clicker" HorizontalAlignment="Center" Margin="130,-87,50,0" VerticalAlignment="Top" Width="400" Grid.ColumnSpan="5" FontFamily="Poppins SemiBold" FontSize="48" Background="{x:Null}" Foreground="Snow" FontWeight="Bold"/>
+            <Label x:Name="GameName" Content="Kicker Clicker" HorizontalAlignment="Center" Margin="130,-87,50,0" VerticalAlignment="Top" Width="400" Grid.ColumnSpan="5" FontFamily="Poppins SemiBold" FontSize="48" Background="{x:Null}" Foreground="Snow" FontWeight="Bold">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
             <Label x:Name="DoublePointerLabel" Content="0"  Foreground="White" Margin="30,324,282,-79.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black" Grid.Column="4" FontSize="10"/>
             <Label x:Name="BonusInfo2" Content="speed  x2"  Foreground="White" Margin="24,250,275,-3.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black" Grid.Column="4" FontSize="11"/>
             <Label x:Name="BonusInfo1" Content="click  x2"  Foreground="White" Margin="312,250,40,-3.617" HorizontalContentAlignment="Center" FontFamily="Poppins Black" FontSize="11" RenderTransformOrigin="0.411,-0.783"/>
