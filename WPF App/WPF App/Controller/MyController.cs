@@ -19,7 +19,6 @@ namespace WPF_App.Controller
         private MyView _view = new MyView();
         private BonusImprovement _doubleClicker = new BonusImprovement(200);
         private BonusImprovement _doublePointer = new BonusImprovement(1000);
-        private GameSaver gameSaver = new GameSaver();
 
         public User User { get => _user; set => _user = value; }
         public MyView View { get => _view; set => _view = value; }
@@ -36,24 +35,8 @@ namespace WPF_App.Controller
             Timer.Start();
         }
 
-        // DESTRUCTOR
-        ~MyController()
-        {
-            gameSaver.sendBasicData(User.Points, User.SpeedOfAddingPoints);
-            gameSaver.sendImprovementsData(
-                BasicImprovements[0].NumberOfUpgrades,
-                BasicImprovements[1].NumberOfUpgrades,
-                BasicImprovements[2].NumberOfUpgrades,
-                BasicImprovements[3].NumberOfUpgrades,
-                BasicImprovements[4].NumberOfUpgrades,
-                BasicImprovements[5].NumberOfUpgrades,
-                DoubleClicker.NumberOfUpgrades,
-                DoublePointer.NumberOfUpgrades
-                );
-            gameSaver.SaveData("save.txt");
-        }
-
         // METHODS
+
         public void AddBasicImprovements(params BasicImprovement[] basicImprovements)
         {
             for(int i = 0; i < basicImprovements.Length; i++)

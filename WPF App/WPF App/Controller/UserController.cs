@@ -11,6 +11,37 @@ namespace WPF_App.Controller
     {
         private SoundPlayer clickSound = new SoundPlayer(@"Sources\Sounds\SoccerKick_author$volivieri$.wav");
         private SoundPlayer upgradeSound = new SoundPlayer(@"Sources\Sounds\SoccerFansCheering.wav");
+        private GameSaver gameSaver = new GameSaver();
+
+        // DESTRUCTOR
+        ~UserController()
+        {
+            gameSaver.sendScoreInfo(User.Points);
+            gameSaver.sendImprovementsData(
+                BasicImprovements[0].NumberOfUpgrades,
+                BasicImprovements[1].NumberOfUpgrades,
+                BasicImprovements[2].NumberOfUpgrades,
+                BasicImprovements[3].NumberOfUpgrades,
+                BasicImprovements[4].NumberOfUpgrades,
+                BasicImprovements[5].NumberOfUpgrades,
+                DoubleClicker.NumberOfUpgrades,
+                DoublePointer.NumberOfUpgrades
+                );
+            gameSaver.SaveData("save.txt");
+        }
+        public void UploadDataFromFile(string path)
+        {
+            string[] gameData = gameSaver.LoadData(path);
+            User.Points = double.Parse(gameData[0]);
+            for (int i = 2; i < 8; i++)
+            {
+                for (int j = 0; j < int.Parse(gameData[i]); j++)
+                {
+                    upgradeImprovement(0);
+                }
+            }
+
+        }
         public void ClickButton()
         {
             this.clickSound.Play();
@@ -25,16 +56,21 @@ namespace WPF_App.Controller
             {
                 upgradeSound.Play();
                 this.ChargeUser(BasicImprovements[index].CurrentPrice);
-                View.SetScoreLabelText(User.Points); //ScoreLabel.Content = user.Points;
-
-                this.IncreaseUserAdditionSpeed(BasicImprovements[index].SpeedOfAddingPoints);
-                this.UpgradeBasicImprovement(index);
-                View.SetButtonText(BasicImprovements[index].CurrentPrice, index);
-                View.UpgradeLevelLabel(index);
-                // update pic
-                View.UpdateBasicImprovementPic(index, BasicImprovements[index].NumberOfUpgrades);
+                upgradeImprovement(index);
             }
         }
+        public void upgradeImprovement(int index)
+        {
+            View.SetScoreLabelText(User.Points); //ScoreLabel.Content = user.Points;
+            this.IncreaseUserAdditionSpeed(BasicImprovements[index].SpeedOfAddingPoints);
+            this.UpgradeBasicImprovement(index);
+            View.SetButtonText(BasicImprovements[index].CurrentPrice, index);
+            View.UpgradeLevelLabel(index);
+            // update pic
+            View.UpdateBasicImprovementPic(index, BasicImprovements[index].NumberOfUpgrades);
+        }
+
+
         public void ClickDoubleClicker()
         {
             if (User.Points >= DoubleClicker.CurrentPrice)

@@ -9,7 +9,6 @@ namespace WPF_App
     class GameSaver
     {
         private double score = 0;
-        private double pointsPerSecond = 0;
         private int basicImprovement1Level = 0;
         private int basicImprovement2Level = 0;
         private int basicImprovement3Level = 0;
@@ -20,10 +19,9 @@ namespace WPF_App
         private int bonusImprovement2Level = 0;
         private string dataToSave;
 
-        public void sendBasicData(double score, double pointsPerSecond)
+        public void sendScoreInfo(double score)
         {
             this.score = score;
-            this.pointsPerSecond = pointsPerSecond;
         }
         public void sendImprovementsData(int lvl1, int lvl2, int lvl3, int lvl4, int lvl5, int lvl6,
             int bonuslvl1, int bonuslvl2)
@@ -37,10 +35,9 @@ namespace WPF_App
             this.bonusImprovement1Level = bonuslvl1;
             this.bonusImprovement2Level = bonuslvl2;
         }
-        private void hashData()
+        private void mergeData()
         {
             dataToSave = score + " "
-            + pointsPerSecond + " "
             + basicImprovement1Level + " "
             + basicImprovement2Level + " "
             + basicImprovement3Level + " "
@@ -49,12 +46,19 @@ namespace WPF_App
             + basicImprovement6Level + " "
             + bonusImprovement1Level + " "
             + bonusImprovement2Level;
-            dataToSave = dataToSave.GetHashCode().ToString();
         }
         public void SaveData(string path) // save.txt
         {
-            hashData();
-            System.IO.File.WriteAllText(path, dataToSave);
+            mergeData();
+            System.IO.File.WriteAllText(path, dataToSave); 
         }
+
+        public string[] LoadData(string path) // save.txt
+        {
+            string gameData = System.IO.File.ReadAllText(path);
+            string[] words = gameData.Split(' ');
+            return words;
+        }
+
     }
 }
