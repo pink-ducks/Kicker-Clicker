@@ -27,7 +27,7 @@ namespace WPF_App
             InitializeComponent();
             models.SendData(controller, view);
             SendViewData(view);
-            controller.UploadDataFromFile("save.txt");
+            controller.UploadSavedData();
         }
         // Main Click Button
         private void ClickButton_Click(object sender, RoutedEventArgs e)

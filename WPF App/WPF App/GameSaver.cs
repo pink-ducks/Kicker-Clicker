@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WPF_App.Controller;
 
 namespace WPF_App
 {
@@ -19,46 +20,74 @@ namespace WPF_App
         private int bonusImprovement2Level = 0;
         private string dataToSave;
 
-        public void sendScoreInfo(double score)
-        {
-            this.score = score;
-        }
-        public void sendImprovementsData(int lvl1, int lvl2, int lvl3, int lvl4, int lvl5, int lvl6,
-            int bonuslvl1, int bonuslvl2)
-        {
-            this.basicImprovement1Level = lvl1;
-            this.basicImprovement2Level = lvl2;
-            this.basicImprovement3Level = lvl3;
-            this.basicImprovement4Level = lvl4;
-            this.basicImprovement5Level = lvl5;
-            this.basicImprovement6Level = lvl6;
-            this.bonusImprovement1Level = bonuslvl1;
-            this.bonusImprovement2Level = bonuslvl2;
-        }
         private void mergeData()
         {
-            dataToSave = score + " "
-            + basicImprovement1Level + " "
+            dataToSave =
+              basicImprovement1Level + " "
             + basicImprovement2Level + " "
             + basicImprovement3Level + " "
             + basicImprovement4Level + " "
             + basicImprovement5Level + " "
             + basicImprovement6Level + " "
             + bonusImprovement1Level + " "
-            + bonusImprovement2Level;
+            + bonusImprovement2Level + " "
+            + score;
         }
-        public void SaveData(string path) // save.txt
+        public void SaveData(UserController c)
         {
+            this.basicImprovement1Level = c.BasicImprovements[0].NumberOfUpgrades;
+            this.basicImprovement2Level = c.BasicImprovements[1].NumberOfUpgrades;
+            this.basicImprovement3Level = c.BasicImprovements[2].NumberOfUpgrades;
+            this.basicImprovement4Level = c.BasicImprovements[3].NumberOfUpgrades;
+            this.basicImprovement5Level = c.BasicImprovements[4].NumberOfUpgrades;
+            this.basicImprovement6Level = c.BasicImprovements[5].NumberOfUpgrades;
+            this.bonusImprovement1Level = c.DoubleClicker.NumberOfUpgrades;
+            this.bonusImprovement2Level = c.DoublePointer.NumberOfUpgrades;
+            this.score = c.User.Points;
+
             mergeData();
-            System.IO.File.WriteAllText(path, dataToSave); 
+            System.IO.File.WriteAllText("../../save.txt", dataToSave); 
         }
 
-        public string[] LoadData(string path) // save.txt
+        public string[] LoadData(string path) // ../../save.txt
         {
-            string gameData = System.IO.File.ReadAllText(path);
-            string[] words = gameData.Split(' ');
-            return words;
+            if(System.IO.File.Exists(path))
+            {
+                string gameData = System.IO.File.ReadAllText(path);
+                if (gameData != null)
+                {
+                    string[] words = gameData.Split(' ');
+                    return words;
+                }
+            }
+            return null;
         }
 
+        public void LoadScoreAndImprovements(UserController c)
+        {
+            string[] gameData = LoadData("../../save.txt");
+            if(gameData != null && gameData.Length == 9)
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    for (int j = 0; j < int.Parse(gameData[i]); j++)
+                    {
+                        c.upgradeImprovement(i);
+                    }
+                }
+                // double clicker
+                for (int i = 0; i < int.Parse(gameData[6]); i++)
+                {
+                    c.UpgradeDoubleClicker();
+                }
+                // double pointer
+                for (int i = 0; i < int.Parse(gameData[7]); i++)
+                {
+                    c.UpgradeDoublePointer();
+                }
+                // score
+                c.User.Points = double.Parse(gameData[8]);
+            }
+        }
     }
 }
