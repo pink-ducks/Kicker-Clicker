@@ -137,7 +137,7 @@ namespace WPF_App.View
             ImpovementsLevelsLabels[index].Content = updatedLevel.ToString();
         }
 
-        public void SetButtonsTexts(params int[] prices)
+        public void SetButtonsTexts(params double[] prices)
         {
             for (int i = 0; i < buttons.Count; i++)
             {

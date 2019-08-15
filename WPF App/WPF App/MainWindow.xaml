@@ -72,7 +72,7 @@
                 <Image x:Name="BonusImprovement2Image" HorizontalAlignment="Center" Height="30" Width="35" Source="Sources/bonus.png" VerticalAlignment="Top" Margin="15,0"/>
             </Grid>
             <Label x:Name="Improvement1Label" Content="0"  Foreground="White" Margin="49.557,66.816,262.499,173.184" Width="100" HorizontalContentAlignment="Center" FontFamily="Poppins Black" FontSize="10"/>
-            <Label x:Name="Improvement2Label" Content="0"  Foreground="White" Margin="193,198,119,42.383" Width="100" HorizontalContentAlignment="Center" FontFamily="Segoe UI Black" FontSize="10"/>
+            <Label x:Name="Improvement2Label" Content="0"  Foreground="White" Margin="193,198,119,42.383" Width="100" HorizontalContentAlignment="Center" FontFamily="Poppins Black" FontSize="10"/>
             <Label x:Name="Improvement3Label" Content="0"  Foreground="White" Margin="50,315,262,-74.617" Width="100" HorizontalContentAlignment="Center" FontFamily="Poppins Black" FontSize="10"/>
             <Label x:Name="Improvement4Label" Content="0"  Foreground="White" Margin="229.645,71.816,42.404,168.184" Width="100" HorizontalContentAlignment="Center" Grid.Column="4" FontFamily="Poppins Black" FontSize="10"/>
             <Label x:Name="Improvement5Label" Content="0"  Foreground="White" Margin="80,200,192,40.383" Width="100" HorizontalContentAlignment="Center" Grid.Column="4" FontFamily="Poppins Black" FontSize="10"/>

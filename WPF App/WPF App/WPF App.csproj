@@ -64,6 +64,7 @@
     </Compile>
     <Compile Include="Controller\MyController.cs" />
     <Compile Include="Controller\UserController.cs" />
+    <Compile Include="GameSaver.cs" />
     <Compile Include="Model\BasicImprovement.cs" />
     <Compile Include="Model\BonusImprovement.cs" />
     <Compile Include="ProgramData.cs" />
