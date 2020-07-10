@@ -16,6 +16,8 @@
 #### 1Y = 1 000 000 000 000 000 000 000 000
 
 ## Created by:
-#### Mateusz - team leader https://github.com/matpiwowarski
-#### Roman - backend developer https://github.com/romanzemela
-#### Paulina - graphic designer https://github.com/paulinaurbas
+[Mateusz Piwowarski](https://github.com/matpiwowarski)
+
+[Roman Zemeła](https://github.com/romanzemela)
+
+[Paulina Urbaś](https://github.com/paulinaurbas)
